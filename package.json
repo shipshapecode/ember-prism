@@ -1,7 +1,7 @@
 {
   "name": "ember-prism",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Ember components for PrismJS",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -15,7 +15,7 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Brandon J McKay",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.0",
@@ -32,10 +32,14 @@
     "ember-data": "1.0.0-beta.14.1",
     "ember-export-application-global": "^1.0.2",
     "express": "^4.8.5",
-    "glob": "^4.0.5"
+    "glob": "^4.4.0"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "prism",
+    "prism-js",
+    "syntax",
+    "highlighting"
   ],
   "ember-addon": {
     "configPath": "tests/dummy/config"

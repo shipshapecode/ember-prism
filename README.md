@@ -1,16 +1,19 @@
 # Ember-prism
 
-This README outlines the details of collaborating on this Ember addon.
+This project aims to make re-usable ember components for [PrismJS](http://prismjs.com/).
+This project is packaged as an [EmberCLI](http://www.ember-cli.com) addon.
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+Install the ember-cli addon in your ember-cli project:
 
-## Running
+```
+$ ember install:addon ember-prism
+```
 
-* `ember server`
+## Running Locally
+
+* Run `ember server` from `tests/dummy`
 * Visit your app at http://localhost:4200.
 
 ## Running Tests
@@ -23,3 +26,7 @@ This README outlines the details of collaborating on this Ember addon.
 * `ember build`
 
 For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+
+## Contribution
+
+Yes please.
