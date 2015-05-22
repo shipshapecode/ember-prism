@@ -11,6 +11,35 @@ Install the ember-cli addon in your ember-cli project:
 $ ember install:addon ember-prism
 ```
 
+## Usage
+
+### Using components
+
+We have two main components, `code-block`, and `code-inline`. They'll take care of running Prism on your code as you transition.
+
+You may need to use `&lt;`, and `&gt;` html attributes to escape `<`, and `>` characters so they aren't removed by Handlebars.
+
+```handlebars
+{{#code-block language='markup'}}//Can be left blank for the default
+  &lt;a href='link'&gt;value&lt;/a&gt;
+{{/code-block}}
+```
+
+### Configuration
+
+You can set which theme, components, and plugins you'd like to use from Prism.
+
+```javascript
+//Brocfile.js
+var app = new EmberApp({
+  'ember-prism': {
+    'theme': 'twilight',
+    'components': ['scss', 'javascript'],//needs to be an array, or undefined.
+    'plugins': ['line-highlight']
+  }
+})
+```
+
 ## Running Locally
 
 * Run `ember server` from `tests/dummy`
