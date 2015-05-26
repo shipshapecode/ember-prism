@@ -8,7 +8,7 @@ This project is packaged as an [EmberCLI](http://www.ember-cli.com) addon.
 Install the ember-cli addon in your ember-cli project:
 
 ```
-$ ember install:addon ember-prism
+$ ember install ember-prism
 ```
 
 ## Usage
@@ -34,11 +34,13 @@ You can set which theme, components, and plugins you'd like to use from Prism.
 var app = new EmberApp({
   'ember-prism': {
     'theme': 'twilight',
-    'components': ['scss', 'javascript'],//needs to be an array, or undefined.
+    'components': ['scss', 'javascript'], //needs to be an array, or undefined.
     'plugins': ['line-highlight']
   }
 })
 ```
+
+If you want to use the default theme, just remove the `theme` option completely.
 
 ## Running Locally
 
