@@ -1,4 +1,3 @@
-import Ember from 'ember';
 import CodeInline from './code-inline';
 
 export default CodeInline.extend({
