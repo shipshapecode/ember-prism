@@ -44,7 +44,7 @@ If you want to use the default theme, just remove the `theme` option completely.
 
 ## Running Locally
 
-* Run `ember server` from `tests/dummy`
+* Run `ember server`
 * Visit your app at http://localhost:4200.
 
 ## Running Tests
