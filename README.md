@@ -42,6 +42,42 @@ var app = new EmberApp({
 
 If you want to use the default theme, just remove the `theme` option completely.
 
+### Usage from another addon
+
+If you want to enclude ember-prism from another addon, you'll need to do two things.
+First, make sure your addon's default blueprint installs the Prism Bower package.
+
+```js
+// blueprints/<addon-name>/index.js
+var installPrismBowerPackage = require('ember-prism/blueprints/ember-prism').installPrismBowerPackage;
+
+module.exports = {
+  // ...
+
+  afterInstall: function(options) {
+    return installPrismBowerPackage(this).then(function() {
+      // ...any other logic your blueprint needs
+    });
+  }
+};
+```
+
+Second, import all the required CSS and JS for Prism into the app's dependency tree.
+
+```js
+// index.js
+var importPrismSources = require('ember-prism').importPrismSources;
+
+module.exports = {
+  // ...
+
+  included: function(app) {
+    importPrismSources(app, { /* options to ember-prism */ });
+    // ...
+  }
+};
+```
+
 ## Running Locally
 
 * Run `ember server`
