@@ -1,24 +1,27 @@
 /* global Prism */
-
 import Ember from 'ember';
+const {
+  Component,
+  computed
+} = Ember;
 
-export default Ember.Component.extend({
-  tagName: 'pre',
-  classNames: ['code-block'],
+export default Component.extend({
+  tagName:           'pre',
+  classNames:        ['code-block'],
   classNameBindings: ['languageClass'],
 
-  inline: false,
+  inline:   false,
   language: 'markup',
 
-  languageClass: Ember.computed('language', function(){
+  languageClass: computed('language', function(){
     return 'language-' + this.get('language');
   }),
 
-  getElement: function(){
+  getElement(){
     return this.$('[class*=language-]')[0];
   },
 
-  didInsertElement: function(){
+  didInsertElement(){
     Prism.highlightElement(this.getElement());
   }
 });
