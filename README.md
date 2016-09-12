@@ -30,7 +30,7 @@ You may need to use `&lt;`, and `&gt;` html attributes to escape `<`, and `>` ch
 You can set which theme, components, and plugins you'd like to use from Prism.
 
 ```javascript
-//Brocfile.js
+//ember-cli-build.js
 var app = new EmberApp({
   'ember-prism': {
     'theme': 'twilight',
