@@ -11,6 +11,13 @@
   ],
   "license": "MIT",
   "author": "Brandon J McKay",
+  "contributors": [
+    {
+      "name": "Robert Wagner",
+      "email": "rwwagner90@gmail.com",
+      "url": "https://github.com/rwwagner90"
+    }
+  ],
   "directories": {
     "doc": "doc",
     "test": "tests"
