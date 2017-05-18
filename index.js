@@ -1,11 +1,11 @@
-/* jshint node: true */
+/* eslint-env node */
 'use strict';
 
 var fs = require('fs');
 
 module.exports = {
   name: 'ember-prism',
-  included: function(app) {
+  included(app) {
     /*
      * If included by an addon rather than the root app, there will be no import method,
      * so it's that addon's responsibility to call importPrismSources instead.
