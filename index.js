@@ -6,70 +6,68 @@ var fs = require('fs');
 module.exports = {
   name: 'ember-prism',
   included(app) {
-    /*
-     * If included by an addon rather than the root app, there will be no import method,
-     * so it's that addon's responsibility to call importPrismSources instead.
-     */
-    if (!app.import) { return; }
+    // Defaults that can be overriden by options
+    this.components = [];
+    this.plugins = [];
+    this.theme = 'themes/prism.css';
 
-    importPrismSources(app, app.options['ember-prism']);
-  },
+    if (app.options && app.options['ember-prism']) {
+      const options = app.options['ember-prism'];
+      const components = options.components;
+      const plugins = options.plugins;
+      const theme = options.theme;
 
-  importPrismSources: importPrismSources
-};
+      if (theme && theme !== 'none') {
+        this.theme = `themes/prism-${theme}.css`;
+      }
 
-/**
- * Imports all necessary Prism source styling and JS into the including app. This function
- * is a public hook for addons that wish to use ember-prism within their own components.
- */
-function importPrismSources(app, givenOptions) {
-  var options = givenOptions || {};
+      if (components) {
+        components.forEach((component) => {
+          this.components.push(`components/prism-${component}.js`);
+        });
+      }
 
-  //import theme based on options
-  if (options.theme){
-    // allow ability to specify no css if we want to provide our own
-    if (options.theme !== 'none'){
-      app.import(app.bowerDirectory + '/prism/themes/prism-' + options.theme + '.css');
+      if (plugins) {
+        plugins.forEach((plugin) => {
+
+          /**
+           * Most Prism plugins contains both a js file and a css file, but there
+           * are exception. `highlight-keywords` for instance, does not have a
+           * css file.
+           *
+           * When the plugin is imported, the app should check for file existence
+           * before calling `app.import()`.
+           */
+
+            // file extensions to be tested for existence.
+          const fileExtensions = ['js', 'css'];
+
+          fileExtensions.forEach((fileExtension) => {
+            const nodeAssetsPath = `plugins/${plugin}/prism-${plugin}.${fileExtension}`;
+            const file = `node_modules/prismjs/${nodeAssetsPath}`;
+
+
+            if (fs.existsSync(file)) {
+              this.plugins.push(nodeAssetsPath);
+            }
+          });
+
+        });
+      }
     }
-  } else {
-    // fall back to default theme
-    app.import(app.bowerDirectory + '/prism/themes/prism.css');
+
+    this._super.included.apply(this, arguments);
+  },
+  options: {
+    nodeAssets: {
+      prismjs() {
+        return {
+          import: [
+            'prism.js',
+            this.theme
+          ].concat(this.components, this.plugins)
+        };
+      }
+    }
   }
-
-  //import main javascript
-  app.import(app.bowerDirectory + '/prism/prism.js');
-
-  //import components
-  if (options.components){
-    options.components.forEach(function(component){
-      app.import(app.bowerDirectory + '/prism/components/prism-' + component + '.js');
-    });
-  }
-
-  // import plugins
-  if (options.plugins){
-    options.plugins.forEach(function(plugin){
-
-      /**
-       * Most Prism plugins contains both a js file and a css file, but there
-       * are exception. `highlight-keywords` for instance, does not have a
-       * css file.
-       *
-       * When the plugin is imported, the app should check for file existence
-       * before calling `app.import()`.
-       */
-
-      // file extensions to be tested for existence.
-      var fileExtensions = ['js', 'css'];
-
-      fileExtensions.forEach(function(fileExtension) {
-        var file = app.bowerDirectory + '/prism/plugins/' + plugin + '/prism-' + plugin + '.' + fileExtension;
-
-        if (fs.existsSync(file)) {
-          app.import(file);
-        }
-      });
-
-    });
-  }
-}
+};
