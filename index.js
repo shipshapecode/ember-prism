@@ -15,7 +15,11 @@ module.exports = {
       files: prismFiles,
     });
 
-    return MergeTrees([vendorTree, prismTree]);
+    if (vendorTree) {
+      return MergeTrees([vendorTree, prismTree]);
+    } else {
+      return prismTree;
+    }
   },
 
   included(app, parentAddon) {
