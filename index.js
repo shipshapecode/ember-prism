@@ -15,7 +15,7 @@ module.exports = {
       files: prismFiles,
     });
 
-    return new MergeTrees([vendorTree, prismTree]);
+    return MergeTrees([vendorTree, prismTree]);
   },
 
   included(app, parentAddon) {
@@ -44,7 +44,7 @@ module.exports = {
     // Defaults that can be overriden by options
     this.components = [];
     this.plugins = [];
-    this.theme = `themes/prism.css`;
+    this.theme = 'themes/prism.css';
 
     if (target.options && target.options['ember-prism']) {
       const options = target.options['ember-prism'];
