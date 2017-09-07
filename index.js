@@ -5,11 +5,13 @@ var fs = require('fs');
 
 module.exports = {
   name: 'ember-prism',
-  included(app) {
+  included() {
     // Defaults that can be overriden by options
     this.components = [];
     this.plugins = [];
     this.theme = 'themes/prism.css';
+
+    let app = findHost(this);
 
     if (app.options && app.options['ember-prism']) {
       const options = app.options['ember-prism'];
@@ -71,3 +73,16 @@ module.exports = {
     }
   }
 };
+
+
+// Polyfill [Addon._findHost](https://ember-cli.com/api/classes/Addon.html#method__findHost) for older versions of ember-cli
+function findHost(addon) {
+  var current = addon;
+  var app;
+
+  do {
+    app = current.app || app;
+  } while (current.parent.parent && (current = current.parent));
+
+  return app;
+}
