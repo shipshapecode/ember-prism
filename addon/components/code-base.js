@@ -4,10 +4,11 @@ import { computed } from '@ember/object';
 
 export default Component.extend({
   classNameBindings: ['languageClass'],
+  inline: false,
   language: 'markup',
 
   languageClass: computed('language', function() {
-    return 'language-' + this.get('language');
+    return `language-${this.get('language')}`;
   }),
 
   getElement() {
