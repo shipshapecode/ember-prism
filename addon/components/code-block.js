@@ -6,5 +6,9 @@ export default CodeBase.extend({
 
   getElement() {
     return this.element.querySelector('[class*=language-]');
+  },
+
+  didRender() {
+    this.element.innerHTML = this.element.innerHTML.trim();
   }
 });

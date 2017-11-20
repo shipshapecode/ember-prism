@@ -12,3 +12,11 @@ test('has `line-numbers` plugin', function(assert) {
     assert.ok(find('pre.code-block .line-numbers-rows'), '`line-numbers` plugin generates `.line-numbers-rows`');
   });
 });
+
+test('the pre innerHTML is trimmed when rendered', function(assert) {
+  visit('/');
+
+  andThen(function() {
+    assert.equal(find('pre.code-block').innerHTML.split('\n').length, 3);
+  });
+});
