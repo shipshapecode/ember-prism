@@ -1,22 +1,21 @@
-import moduleForAcceptance from '../../tests/helpers/module-for-acceptance';
-import {find} from 'ember-native-dom-helpers';
-import { test } from 'qunit';
+import { find, visit } from '@ember/test-helpers';
+import { setupApplicationTest } from 'ember-qunit';
+import { module, test } from 'qunit';
 
-moduleForAcceptance('Acceptance | code block');
 
-test('has `line-numbers` plugin', function(assert) {
-  visit('/');
+module('Acceptance | code block', function(hooks) {
+  setupApplicationTest(hooks);
 
-  andThen(function() {
-    assert.ok(find('pre.code-block.line-numbers'), '`pre.codeblock.line-numbers` is added to the template');
-    assert.ok(find('pre.code-block .line-numbers-rows'), '`line-numbers` plugin generates `.line-numbers-rows`');
+  test('has `line-numbers` plugin', async function(assert) {
+    await visit('/');
+
+    assert.dom('pre.code-block.line-numbers').exists('`pre.codeblock.line-numbers` is added to the template');
+    assert.dom('pre.code-block .line-numbers-rows').exists('`line-numbers` plugin generates `.line-numbers-rows`');
   });
-});
 
-test('the pre innerHTML is trimmed when rendered', function(assert) {
-  visit('/');
+  test('the pre innerHTML is trimmed when rendered', async function(assert) {
+    await visit('/');
 
-  andThen(function() {
     assert.equal(find('pre.code-block').innerHTML.split('\n').length, 3);
   });
 });
