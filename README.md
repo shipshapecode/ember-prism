@@ -7,7 +7,7 @@ This project is packaged as an [EmberCLI](http://www.ember-cli.com) addon.
 
 Install the ember-cli addon in your ember-cli project:
 
-```
+```shell
 $ ember install ember-prism
 ```
 
@@ -47,17 +47,22 @@ If you want to use the default theme, just remove the `theme` option completely.
 * Run `ember server`
 * Visit your app at http://localhost:4200.
 
-## Running Tests
+### Running tests
 
-* `ember test`
-* `ember test --server`
+* `ember test` – Runs the test suite on the current Ember version
+* `ember test --server` – Runs the test suite in "watch mode"
+* `ember try:each` – Runs the test suite against multiple Ember versions
 
-## Building
+### Running the dummy application
 
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+* `ember serve`
+* Visit the dummy application at [http://localhost:4200](http://localhost:4200).
 
 ## Contribution
 
 Yes please.
+For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+
+## License
+
+This project is licensed under the [MIT License](LICENSE.md).
