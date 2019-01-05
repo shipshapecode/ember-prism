@@ -3,7 +3,7 @@
 var fs = require('fs');
 
 module.exports = {
-  name: 'ember-prism',
+  name: require('./package').name,
   included() {
     // Defaults that can be overriden by options
     this.components = [];
