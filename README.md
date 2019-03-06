@@ -15,7 +15,15 @@
 This project aims to make re-usable ember components for [PrismJS](http://prismjs.com/).
 This project is packaged as an [EmberCLI](http://www.ember-cli.com) addon.
 
-## Installation
+Compatibility
+------------------------------------------------------------------------------
+
+* Ember.js v2.18 or above
+* Ember CLI v2.13 or above
+
+
+Installation
+------------------------------------------------------------------------------
 
 Install the ember-cli addon in your ember-cli project:
 
@@ -70,11 +78,13 @@ If you want to use the default theme, just remove the `theme` option completely.
 * `ember serve`
 * Visit the dummy application at [http://localhost:4200](http://localhost:4200).
 
-## Contribution
+Contributing
+------------------------------------------------------------------------------
 
-Yes please.
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+See the [Contributing](CONTRIBUTING.md) guide for details.
 
-## License
+
+License
+------------------------------------------------------------------------------
 
 This project is licensed under the [MIT License](LICENSE.md).
