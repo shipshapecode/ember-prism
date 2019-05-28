@@ -9,7 +9,7 @@
     "syntax",
     "highlighting"
   ],
-  "repository": "https://github.com/brandonjmckay/ember-prism",
+  "repository": "https://github.com/shipshapecode/ember-prism",
   "license": "MIT",
   "author": "Brandon J McKay",
   "directories": {
