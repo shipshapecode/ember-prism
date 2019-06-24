@@ -37,13 +37,24 @@ $ ember install ember-prism
 
 We have two main components, `code-block`, and `code-inline`. They'll take care of running Prism on your code as you transition.
 
-You may need to use `&lt;`, and `&gt;` html attributes to escape `<`, and `>` characters so they aren't removed by Handlebars.
+They will accept the code to be rendered by either passing a `@code` argument...
+ 
+```hbs
+<CodeBlock @code="<a href='link'>value</a>" @language="markup" />
+``` 
+ 
+... or by using the components in block form:
 
 ```hbs
-{{#code-block language='markup'}}//Can be left blank for the default
+<CodeBlock @language="markup">
   &lt;a href='link'&gt;value&lt;/a&gt;
-{{/code-block}}
+</CodeBlock>
 ```
+ 
+While both variants support all features, the former is preferable when the code content is subject to changes (re-rendering).
+For the latter you may need to use `&lt;`, and `&gt;` html attributes to escape `<`, and `>` characters so they aren't removed by Handlebars.
+
+The `@language` argument is optional, and if passed should match one of Prism's [supported languages](https://prismjs.com/#supported-languages).
 
 ### Configuration
 
