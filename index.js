@@ -57,6 +57,8 @@ module.exports = {
       }
     }
 
+    app.import('vendor/ember-prism.js');
+
     this._super.included.apply(this, arguments);
   },
   options: {
