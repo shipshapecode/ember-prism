@@ -36,7 +36,7 @@
     "ember-cli-htmlbars": "^3.0.1",
     "ember-cli-node-assets": "^0.2.2",
     "ember-in-element-polyfill": "^0.2.0",
-    "prismjs": "^1.15.0"
+    "prismjs": "^1.19.0"
   },
   "devDependencies": {
     "@ember/optional-features": "^0.7.0",
