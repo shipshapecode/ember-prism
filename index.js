@@ -2,6 +2,7 @@
 
 var fs = require('fs');
 
+
 module.exports = {
   name: require('./package').name,
   included() {
