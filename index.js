@@ -15,8 +15,12 @@ module.exports = {
     if (app.options && app.options['ember-prism']) {
       const options = app.options['ember-prism'];
       const components = options.components;
-      const plugins = options.plugins;
+      const plugins = (options.plugins || []);
       const theme = options.theme;
+
+      if(!plugins.includes('normalize-whitespace')) {
+        plugins.push('normalize-whitespace');
+      }
 
       if (theme && theme !== 'none') {
         this.theme = `themes/prism-${theme}.css`;

@@ -20,10 +20,12 @@ export default Component.extend({
     return this.blockElement && this.blockElement.textContent;
   },
 
-  prismCode: computed('code', function () {
-    const code = this.get('hasBlock') ? this.getBlockContent() : this.get('code');
+  prismCode: computed('code', function() {
+    let code = this.get('hasBlock') ? this.getBlockContent() : this.get('code');
     const language = this.get('language');
     if (!code) return '';
+
+    code = Prism.plugins.NormalizeWhitespace.normalize(code);
 
     const grammar = Prism.languages[language];
     if (!grammar) return '';

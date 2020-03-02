@@ -6,7 +6,7 @@ module.exports = function(defaults) {
   let app = new EmberAddon(defaults, {
     'ember-prism': {
       plugins: [
-        'line-numbers',
+        'line-numbers'
       ],
     }
   });

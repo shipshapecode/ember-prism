@@ -16,6 +16,6 @@ module('Acceptance | code block', function(hooks) {
   test('the pre innerHTML is trimmed when rendered', async function(assert) {
     await visit('/');
 
-    assert.equal(find('pre.code-block').innerHTML.split('\n').length, 4);
+    assert.equal(find('pre.code-block').innerHTML.split('\n').length, 3);
   });
 });
