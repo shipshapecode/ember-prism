@@ -25,7 +25,9 @@ export default Component.extend({
     const language = this.get('language');
     if (!code) return '';
 
-    code = Prism.plugins.NormalizeWhitespace.normalize(code);
+    if (Prism && Prism.plugins && Prism.plugins.NormalizeWhitespace) {
+      code = Prism.plugins.NormalizeWhitespace.normalize(code);
+    }
 
     const grammar = Prism.languages[language];
     if (!grammar) return '';
