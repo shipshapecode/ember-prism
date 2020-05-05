@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "ember-cli-babel": "^7.17.2",
-    "ember-cli-htmlbars": "^4.2.2",
+    "ember-cli-htmlbars": "^5.0.0",
     "ember-cli-node-assets": "^0.2.2",
     "ember-in-element-polyfill": "^1.0.0",
     "prismjs": "^1.19.0"
