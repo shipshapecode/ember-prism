@@ -13,16 +13,16 @@ export default Component.extend({
   hasBlock: empty('code'),
 
   languageClass: computed('language', function() {
-    return `language-${this.get('language')}`;
+    return `language-${this.language}`;
   }),
 
   getBlockContent() {
     return this.blockElement && this.blockElement.textContent;
   },
 
-  prismCode: computed('code', function() {
-    let code = this.get('hasBlock') ? this.getBlockContent() : this.get('code');
-    const language = this.get('language');
+  prismCode: computed('code', 'hasBlock', 'language', function() {
+    let code = this.hasBlock ? this.getBlockContent() : this.code;
+    const language = this.language;
     if (!code) return '';
 
     if (Prism && Prism.plugins && Prism.plugins.NormalizeWhitespace) {
@@ -49,8 +49,8 @@ export default Component.extend({
 
   didRender() {
     this._super(...arguments);
-    let code = this.get('code');
-    if (this.get('hasBlock')) {
+    let code = this.code;
+    if (this.hasBlock) {
       code = this.getBlockContent();
 
       // if block content has changed, force reevaluation of `prismCode`
