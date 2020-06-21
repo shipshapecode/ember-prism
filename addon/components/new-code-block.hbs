@@ -1,0 +1,17 @@
+{{#unless @code}}
+  {{#in-element this.blockElement}}{{yield}}{{/in-element}}
+{{/unless}}
+
+<pre
+  class="code-block {{this.languageClass}} {{if @showLineNumbers "line-numbers"}}"
+>
+  {{~! ~}}
+  <code
+    class="{{this.languageClass}}"
+    {{did-insert this.setPrismCode}}
+    {{did-update this.setPrismCode this.code @language}}
+  >
+    {{~! ~}}{{this.prismCode}}{{~! ~}}
+  </code>
+  {{~! ~}}
+</pre>

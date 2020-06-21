@@ -1,0 +1,1 @@
+export { default } from 'ember-prism/components/new-code-block';

@@ -1,25 +1,52 @@
-<h2 id="title">ember-prism</h2>
+<h1 id="title">ember-prism</h1>
 
-<h3>code-block</h3>
-<CodeBlock>
+
+<h2>1. <code>&lt;CodeBlock&gt;</code> in inline form</h2>
+
+<NewCodeBlock
+  @code="ember install ember-prism"
+/>
+
+
+<h2>2. <code>&lt;CodeBlock&gt;</code> in block form</h2>
+
+<NewCodeBlock>
   &lt;div&gt;
     Can you dig it?
   &lt;/div&gt;
-</CodeBlock>
+</NewCodeBlock>
 
-<h3>code-block with `line-numbers` plugin:</h3>
-<CodeBlock class="line-numbers">
+
+<h2>3. <code>&lt;CodeBlock&gt;</code> with line numbers</h2>
+
+<NewCodeBlock
+  @showLineNumbers={{true}}
+>
   &lt;div&gt;
     Can you dig it?
   &lt;/div&gt;
-</CodeBlock>
+</NewCodeBlock>
 
-<h3>code-block with handlebars language</h3>
-<CodeBlock @language="handlebars">
-  \{{foo}}
-</CodeBlock>
 
-<h3>code-inline</h3>
-<CodeInline>
-  <span>Test</span>
-</CodeInline>
+<h2>4. <code>&lt;CodeBlock&gt;</code> with language</h2>
+
+<NewCodeBlock
+  @language="handlebars"
+>
+  \{{!-- app/components/panel.hbs --}}
+
+  \{{#if this.isAdmin}}
+    &lt;Panel::Admin /&gt;
+  \{{else}}
+    &lt;Panel::NonAdmin /&gt;
+  \{{/if}}
+</NewCodeBlock>
+
+
+<h2>5. <code>&lt;CodeInline&gt;</code></h2>
+
+<div>
+  <p>
+    Did you know? <CodeInline>ember-code-snippet</CodeInline> works great with <CodeInline>ember-prism</CodeInline>!
+  </p>
+</div>
