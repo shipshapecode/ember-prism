@@ -1,6 +1,6 @@
 import { find, visit } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
-import { module, skip, test } from 'qunit';
+import { module, test } from 'qunit';
 
 
 module('Acceptance | code block', function(hooks) {
@@ -13,9 +13,9 @@ module('Acceptance | code block', function(hooks) {
     assert.dom('pre.code-block .line-numbers-rows').exists('`line-numbers` plugin generates `.line-numbers-rows`');
   });
 
-  skip('the pre innerHTML is trimmed when rendered', async function(assert) {
+  test('the pre innerHTML is trimmed when rendered', async function(assert) {
     await visit('/');
 
-    assert.equal(find('pre.code-block').innerHTML.split('\n').length, 3);
+    assert.equal(find('pre.can-you-dig-it').innerHTML.split('\n').length, 3);
   });
 });

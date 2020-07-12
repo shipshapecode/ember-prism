@@ -1,12 +1,4 @@
-import CodeBase from './code-base';
-import layout from '../templates/components/code-block';
+import CodeBaseComponent from './code-base';
 
-export default CodeBase.extend({
-  layout,
-  tagName: 'pre',
-  classNames: ['code-block'],
-
-  getElement() {
-    return this.element.querySelector('[class*=language-]');
-  }
-});
+export default class NewCodeBlockComponent extends CodeBaseComponent {
+}

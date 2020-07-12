@@ -1,7 +1,4 @@
-import CodeBase from './code-base';
+import CodeBaseComponent from './code-base';
 
-export default CodeBase.extend({
-  tagName: 'code',
-  classNames: ['code-inline'],
-  inline: true
-});
+export default class NewCodeInlineComponent extends CodeBaseComponent {
+}

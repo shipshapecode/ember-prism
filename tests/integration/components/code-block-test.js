@@ -8,9 +8,9 @@ module('Integration | Component | code-block', function(hooks) {
 
   test('it adds language class', async function(assert) {
     await render(hbs`
-      {{#code-block language="html"}}
+      <CodeBlock @language="html">
         &lt;p&gt;Test&lt;/p&gt;
-      {{/code-block}}
+      </CodeBlock>
     `);
 
     assert.dom('pre').hasClass('language-html');
@@ -21,9 +21,9 @@ module('Integration | Component | code-block', function(hooks) {
     this.set('code', code);
 
     await render(hbs`
-      {{#code-block}}
-        {{code}}
-      {{/code-block}}
+      <CodeBlock>
+        {{this.code}}
+      </CodeBlock>
     `);
 
     assert.dom('code').hasText(code);
@@ -34,7 +34,7 @@ module('Integration | Component | code-block', function(hooks) {
     const code = '<p class="foo">Test</p>';
     this.set('code', code);
     await render(hbs`
-      {{code-block code=code}}
+      <CodeBlock @code={{this.code}}/>
     `);
 
     assert.dom('code').hasText(code);
@@ -45,9 +45,9 @@ module('Integration | Component | code-block', function(hooks) {
     const code = '<p class="foo">Test</p>';
     this.set('code', code);
     await render(hbs`
-      {{#code-block}}
-        {{code}}
-      {{/code-block}}
+      <CodeBlock>
+        {{this.code}}
+      </CodeBlock>
     `);
 
     assert.dom('code').hasText(code);
@@ -64,7 +64,7 @@ module('Integration | Component | code-block', function(hooks) {
     const code = '<p class="foo">Test</p>';
     this.set('code', code);
     await render(hbs`
-      {{code-block language="html" code=code}}
+      <CodeBlock @language="html" @code={{this.code}}/>
     `);
 
     assert.dom('code').hasText(code);

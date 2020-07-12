@@ -1,36 +1,32 @@
 <h1 id="title">ember-prism</h1>
 
-
 <h2>1. <code>&lt;CodeBlock&gt;</code> in inline form</h2>
 
-<NewCodeBlock
+<CodeBlock
   @code="ember install ember-prism"
 />
 
-
 <h2>2. <code>&lt;CodeBlock&gt;</code> in block form</h2>
 
-<NewCodeBlock>
+<CodeBlock class="can-you-dig-it">
   &lt;div&gt;
     Can you dig it?
   &lt;/div&gt;
-</NewCodeBlock>
-
+</CodeBlock>
 
 <h2>3. <code>&lt;CodeBlock&gt;</code> with line numbers</h2>
 
-<NewCodeBlock
+<CodeBlock
   @showLineNumbers={{true}}
 >
   &lt;div&gt;
     Can you dig it?
   &lt;/div&gt;
-</NewCodeBlock>
-
+</CodeBlock>
 
 <h2>4. <code>&lt;CodeBlock&gt;</code> with language</h2>
 
-<NewCodeBlock
+<CodeBlock
   @language="handlebars"
 >
   \{{!-- app/components/panel.hbs --}}
@@ -40,10 +36,13 @@
   \{{else}}
     &lt;Panel::NonAdmin /&gt;
   \{{/if}}
-</NewCodeBlock>
-
+</CodeBlock>
 
 <h2>5. <code>&lt;CodeInline&gt;</code></h2>
+
+<CodeInline>
+  <span>Test</span>
+</CodeInline>
 
 <div>
   <p>

@@ -1,3 +1,1 @@
-import CodeInline from 'ember-prism/components/code-inline';
-
-export default CodeInline;
+export { default } from 'ember-prism/components/code-inline';

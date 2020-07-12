@@ -1,69 +1,55 @@
 /* global Prism */
-import Component from '@ember/component';
-import { computed } from '@ember/object';
-import { empty } from '@ember/object/computed';
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
 import { htmlSafe } from '@ember/template';
+import { tracked } from '@glimmer/tracking';
 
-export default Component.extend({
-  classNameBindings: ['languageClass'],
-  inline: false,
-  language: 'markup',
-  code: null,
+export default class CodeBaseComponent extends Component {
+  @tracked prismCode = '';
 
-  hasBlock: empty('code'),
+  constructor() {
+    super(...arguments);
 
-  languageClass: computed('language', function() {
-    return `language-${this.language}`;
-  }),
-
-  getBlockContent() {
-    return this.blockElement && this.blockElement.textContent;
-  },
-
-  prismCode: computed('code', 'hasBlock', 'language', function() {
-    let code = this.hasBlock ? this.getBlockContent() : this.code;
-    const language = this.language;
-    if (!code) return '';
-
-    if (Prism && Prism.plugins && Prism.plugins.NormalizeWhitespace) {
-      code = Prism.plugins.NormalizeWhitespace.normalize(code);
-    }
-
-    const grammar = Prism.languages[language];
-    if (!grammar) return '';
-
-    const prismCode = Prism.highlight(code, grammar, language);
-    return htmlSafe(prismCode);
-  }),
-
-  getElement() {
-    return this.element;
-  },
-
-  init() {
-    this._super(...arguments);
     if (typeof document !== 'undefined') {
       this.blockElement = document.createElement('div');
     }
-  },
+  }
 
-  didRender() {
-    this._super(...arguments);
-    let code = this.code;
-    if (this.hasBlock) {
-      code = this.getBlockContent();
+  get code() {
+    const code = this.args.code ?? this.blockElement.textContent;
 
-      // if block content has changed, force reevaluation of `prismCode`
-      if (code !== this._lastBlockContent) {
-        this._lastBlockContent = code;
-        this.notifyPropertyChange('prismCode');
-      }
+    if (Prism?.plugins?.NormalizeWhitespace) {
+      return Prism.plugins.NormalizeWhitespace.normalize(code);
     }
 
-    // force plugin initialization, required for Prism.highlight usage, see https://github.com/PrismJS/prism/issues/1234
+    return code;
+  }
+
+  get language() {
+    return this.args.language ?? 'markup';
+  }
+
+  get languageClass() {
+    return `language-${this.language}`;
+  }
+
+  @action
+  setPrismCode(element) {
+    const code = this.code;
+    const language = this.language;
+    const grammar = Prism.languages[language];
+
+    if (code && language && grammar) {
+      this.prismCode = htmlSafe(Prism.highlight(code, grammar, language));
+    } else {
+      this.prismCode = '';
+    }
+
+    // Force plugin initialization, required for Prism.highlight usage.
+    // See https://github.com/PrismJS/prism/issues/1234
     Prism.hooks.run('complete', {
       code,
-      element: this.getElement()
+      element
     });
   }
-});
+}
