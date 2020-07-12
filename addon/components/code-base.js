@@ -3,21 +3,18 @@ import Component from '@glimmer/component';
 import { action } from '@ember/object';
 import { htmlSafe } from '@ember/template';
 import { tracked } from '@glimmer/tracking';
+import { assert } from '@ember/debug';
 
 export default class CodeBaseComponent extends Component {
   @tracked prismCode = '';
 
-  constructor() {
-    super(...arguments);
-
-    if (typeof document !== 'undefined') {
-      this.blockElement = document.createElement('div');
-    }
-  }
-
   get code() {
-    const code = this.args.code ?? this.blockElement.textContent;
+    const code = this.args.code;
 
+    assert(
+      'ember-prism\'s <CodeBlock/> and <CodeInline/> components require a `code` parameter to be passed in.',
+      code !== undefined
+    );
     if (Prism?.plugins?.NormalizeWhitespace) {
       return Prism.plugins.NormalizeWhitespace.normalize(code);
     }
