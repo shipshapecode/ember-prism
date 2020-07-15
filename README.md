@@ -19,6 +19,8 @@ Compatibility
 * Ember CLI v2.13 or above
 * Node.js v10 or above
 
+For Ember <= 3.12 use version 0.7.0 of ember-prism.
+
 
 Installation
 ------------------------------------------------------------------------------
