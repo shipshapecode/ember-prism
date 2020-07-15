@@ -1,0 +1,11 @@
+<pre
+  class="{{this.languageClass}} {{if @showLineNumbers "line-numbers"}}"
+>
+  {{~! ~}}
+  <CodeInline
+    ...attributes
+    @code={{@code}}
+    @language={{@language}}
+  />
+  {{~! ~}}
+</pre>

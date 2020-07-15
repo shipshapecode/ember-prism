@@ -8,8 +8,6 @@
 [![npm](https://img.shields.io/npm/dm/ember-prism.svg)]()
 [![Ember Observer Score](https://emberobserver.com/badges/ember-prism.svg)](https://emberobserver.com/addons/ember-prism)
 [![Build Status](https://travis-ci.org/shipshapecode/ember-prism.svg?branch=master)](https://travis-ci.org/shipshapecode/ember-prism)
-[![Code Climate](https://codeclimate.com/github/shipshapecode/ember-prism/badges/gpa.svg)](https://codeclimate.com/github/shipshapecode/ember-prism)
-[![Test Coverage](https://codeclimate.com/github/shipshapecode/ember-prism/badges/coverage.svg)](https://codeclimate.com/github/shipshapecode/ember-prism/coverage)
 
 This project aims to make re-usable ember components for [PrismJS](http://prismjs.com/).
 This project is packaged as an [EmberCLI](http://www.ember-cli.com) addon.
@@ -17,9 +15,11 @@ This project is packaged as an [EmberCLI](http://www.ember-cli.com) addon.
 Compatibility
 ------------------------------------------------------------------------------
 
-* Ember.js v3.12 or above
+* Ember.js v3.13 or above
 * Ember CLI v2.13 or above
 * Node.js v10 or above
+
+For Ember <= 3.12 use version 0.7.0 of ember-prism.
 
 
 Installation
@@ -37,19 +37,11 @@ $ ember install ember-prism
 
 We have two main components, `code-block`, and `code-inline`. They'll take care of running Prism on your code as you transition.
 
-They will accept the code to be rendered by either passing a `@code` argument...
+They accept the code to be rendered by passing a `@code` argument:
  
 ```hbs
 <CodeBlock @code="<a href='link'>value</a>" @language="markup" />
 ``` 
- 
-... or by using the components in block form:
-
-```hbs
-<CodeBlock @language="markup">
-  &lt;a href='link'&gt;value&lt;/a&gt;
-</CodeBlock>
-```
  
 While both variants support all features, the former is preferable when the code content is subject to changes (re-rendering).
 For the latter you may need to use `&lt;`, and `&gt;` html attributes to escape `<`, and `>` characters so they aren't removed by Handlebars.

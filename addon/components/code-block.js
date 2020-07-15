@@ -1,12 +1,11 @@
-import CodeBase from './code-base';
-import layout from '../templates/components/code-block';
+import Component from '@glimmer/component';
 
-export default CodeBase.extend({
-  layout,
-  tagName: 'pre',
-  classNames: ['code-block'],
-
-  getElement() {
-    return this.element.querySelector('[class*=language-]');
+export default class CodeBlockComponent extends Component {
+  get language() {
+    return this.args.language ?? 'markup';
   }
-});
+
+  get languageClass() {
+    return `language-${this.language}`;
+  }
+}
