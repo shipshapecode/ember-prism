@@ -1,9 +1,9 @@
-/* global Prism */
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
 import { htmlSafe } from '@ember/template';
 import { tracked } from '@glimmer/tracking';
 import { assert } from '@ember/debug';
+import Prism from 'prismjs';
 
 export default class CodeInlineComponent extends Component {
   @tracked prismCode = '';

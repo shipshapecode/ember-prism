@@ -28,8 +28,6 @@ module.exports = {
         app.import(`node_modules/prismjs/themes/prism.css`);
       }
 
-      app.import('node_modules/prismjs/prism.js');
-
       if (components) {
         components.forEach((component) => {
           app.import(`node_modules/prismjs/components/prism-${component}.js`);
