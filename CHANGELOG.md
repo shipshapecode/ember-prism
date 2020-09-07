@@ -1,3 +1,12 @@
+## v0.8.1 (2020-09-07)
+
+#### :house: Internal
+* [#138](https://github.com/shipshapecode/ember-prism/pull/138) Do not use ember-cli-node-assets for imports ([@rwwagner90](https://github.com/rwwagner90))
+
+#### Committers: 2
+- Robert Wagner ([@rwwagner90](https://github.com/rwwagner90))
+- [@dependabot-preview[bot]](https://github.com/apps/dependabot-preview)
+
 ## v0.8.0 (2020-08-01)
 
 #### :boom: Breaking Change
