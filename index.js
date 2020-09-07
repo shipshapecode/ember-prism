@@ -23,16 +23,12 @@ module.exports = {
       }
 
       if (theme && theme !== 'none') {
-        app.import(`node_modules/prismjs/themes/prism-${theme}.css`);
-      } else {
-        app.import(`node_modules/prismjs/themes/prism.css`);
+        this.theme = `themes/prism-${theme}.css`;
       }
-
-      app.import('node_modules/prismjs/prism.js');
 
       if (components) {
         components.forEach((component) => {
-          app.import(`node_modules/prismjs/components/prism-${component}.js`);
+          this.components.push(`components/prism-${component}.js`);
         });
       }
 
@@ -55,8 +51,9 @@ module.exports = {
             const nodeAssetsPath = `plugins/${plugin}/prism-${plugin}.${fileExtension}`;
             const file = `node_modules/prismjs/${nodeAssetsPath}`;
 
+
             if (fs.existsSync(file)) {
-              app.import(file);
+              this.plugins.push(nodeAssetsPath);
             }
           });
 
@@ -67,6 +64,18 @@ module.exports = {
     app.import('vendor/ember-prism.js');
 
     this._super.included.apply(this, arguments);
+  },
+  options: {
+    nodeAssets: {
+      prismjs() {
+        return {
+          import: [
+            'prism.js',
+            this.theme
+          ].concat(this.components, this.plugins)
+        };
+      }
+    }
   }
 };
 
