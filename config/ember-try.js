@@ -83,7 +83,27 @@ module.exports = async function() {
             edition: 'classic'
           }
         }
-      }
+      },
+      {
+        name: 'embroider',
+        npm: {
+          devDependencies: {
+            '@embroider/core': '*',
+            '@embroider/webpack': '*',
+            '@embroider/compat': '*',
+          },
+        },
+      },
+      {
+        name: 'embroider-optimized',
+        npm: {
+          devDependencies: {
+            '@embroider/core': '*',
+            '@embroider/webpack': '*',
+            '@embroider/compat': '*',
+          },
+        }
+      },
     ]
   };
 };
