@@ -1179,7 +1179,7 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@glimmer/component@^1.0.1":
+"@glimmer/component@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@glimmer/component/-/component-1.0.2.tgz#679307972d29a849225c13062ab11c779956ff60"
   integrity sha512-st6YroDjkvUeYWE36NglNG9hXmJOuOI8t44UEp1tufGc4B1L/CTlt1ziQGkaxkhY7/o2r0ZCcWHvf5bpq838YQ==
@@ -1226,7 +1226,7 @@
     "@handlebars/parser" "^1.1.0"
     simple-html-tokenizer "^0.5.9"
 
-"@glimmer/tracking@^1.0.1":
+"@glimmer/tracking@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@glimmer/tracking/-/tracking-1.0.2.tgz#4fe9ca89e3f4a2ae8e37c8bd8e4ea0d886d9abbf"
   integrity sha512-9Vp04TM2IDTShGFdxccfvnmcaj4NwqLrwbOXm4iju5KL/WkeB8mqoCSLtO3kUg+80DqU0pKE8tR460lQP8CutA==
@@ -9814,7 +9814,7 @@ printf@^0.5.1:
   resolved "https://registry.yarnpkg.com/printf/-/printf-0.5.3.tgz#8b7eec278d886833312238b2bf42b2b6f250880a"
   integrity sha512-t3lYN6vPU5PZXDiEZZqoyXvN8wCsBfi8gPoxTKo2e5hhV673t/KUh+mfO8P8lCOCDC/BWcOGIxKyebxc5FuqLA==
 
-prismjs@^1.19.0:
+prismjs@^1.22.0:
   version "1.22.0"
   resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.22.0.tgz#73c3400afc58a823dd7eed023f8e1ce9fd8977fa"
   integrity sha512-lLJ/Wt9yy0AiSYBf212kK3mM5L8ycwlyTlSxHBAneXLR0nzFMlZ5y7riFPF3E33zXOF2IH95xdY5jIyZbM9z/w==
@@ -10008,7 +10008,7 @@ quick-temp@^0.1.2, quick-temp@^0.1.3, quick-temp@^0.1.5, quick-temp@^0.1.8:
     rimraf "^2.5.4"
     underscore.string "~3.3.4"
 
-qunit-dom@^1.4.0:
+qunit-dom@^1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/qunit-dom/-/qunit-dom-1.5.0.tgz#f3e062562c18fb354b7657afd31890d89a24691d"
   integrity sha512-VTFApYbzcYkL5Zg7XgZMgLgMI9JXEX+lwBS5bFy5hRkIaz9V38q7rN44svxFBNHWs96y3UaFaAYpOEmlQ0j+fw==
@@ -10292,7 +10292,7 @@ regjsparser@^0.6.4:
   dependencies:
     jsesc "~0.5.0"
 
-release-it-lerna-changelog@^2.3.0:
+release-it-lerna-changelog@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/release-it-lerna-changelog/-/release-it-lerna-changelog-2.4.0.tgz#2751cc1b00989d7095fc8c232a54d75b9240e735"
   integrity sha512-133XeF9esKAnYuhJQ5nKpQWZYTzkfxVy6YU9NnC0LiiA2jG/4lq9G2D70C3YceWgIAA9uX+Q+1WwWwkY4GY8Uw==
@@ -10340,10 +10340,10 @@ release-it@^13.7.0:
     yaml "1.10.0"
     yargs-parser "19.0.4"
 
-release-it@^14.0.1:
-  version "14.0.4"
-  resolved "https://registry.yarnpkg.com/release-it/-/release-it-14.0.4.tgz#b9d10042bc9283c0f81adf8a62932a29fb89bb65"
-  integrity sha512-EC6kByBoAfxqBE2TGVYUGK6L6uZ51M1gYw+bmafhmJqXkmU9ENutl0vTfQK8dsXpzV8dQ+iASOrFnXPremgO5g==
+release-it@^14.1.0:
+  version "14.1.0"
+  resolved "https://registry.yarnpkg.com/release-it/-/release-it-14.1.0.tgz#44dce71e35fcd57e0518c6dfdca1486a0c2889e6"
+  integrity sha512-S3yFUl7dv4D5+/Gqe7Qi3zKKDlH5KtrrZfSiNX6QanQ1B21htfzGWfU+JmE89aKJgZPmNG7W0vuiSGXoRzbFZA==
   dependencies:
     "@iarna/toml" "2.2.5"
     "@octokit/rest" "18.0.6"
