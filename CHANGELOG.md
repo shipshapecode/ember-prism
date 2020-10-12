@@ -1,3 +1,15 @@
+## v0.9.0 (2020-10-12)
+
+#### :house: Internal
+* [#163](https://github.com/shipshapecode/ember-prism/pull/163) Bump prism to fix vulnerability, bump deps ([@rwwagner90](https://github.com/rwwagner90))
+* [#162](https://github.com/shipshapecode/ember-prism/pull/162) Ember 3.21 ([@rwwagner90](https://github.com/rwwagner90))
+* [#148](https://github.com/shipshapecode/ember-prism/pull/148) add embroider scenarios to ember-try ([@ef4](https://github.com/ef4))
+
+#### Committers: 3
+- Edward Faulkner ([@ef4](https://github.com/ef4))
+- Robert Wagner ([@rwwagner90](https://github.com/rwwagner90))
+- [@dependabot-preview[bot]](https://github.com/apps/dependabot-preview)
+
 ## v0.8.2 (2020-09-07)
 
 ## v0.8.1 (2020-09-07)
