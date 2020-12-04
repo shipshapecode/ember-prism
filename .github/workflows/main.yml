@@ -36,9 +36,8 @@ jobs:
 
   try-scenarios:
     name: "Try: ${{ matrix.ember-try-scenario }}"
-
     runs-on: ubuntu-latest
-
+    continue-on-error: ${{ matrix.experimental }}
     needs: test
 
     strategy:
