@@ -37,7 +37,6 @@ jobs:
   try-scenarios:
     name: "Try: ${{ matrix.ember-try-scenario }}"
     runs-on: ubuntu-latest
-    continue-on-error: ${{ matrix.allow-failure }}
     needs: test
 
     strategy:
@@ -68,3 +67,4 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: test
         run: node_modules/.bin/ember try:one ${{ matrix.ember-try-scenario }} --skip-cleanup
+        continue-on-error: ${{ matrix.allow-failure }}
