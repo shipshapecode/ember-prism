@@ -37,13 +37,13 @@ jobs:
   try-scenarios:
     name: "Try: ${{ matrix.ember-try-scenario }}"
     runs-on: ubuntu-latest
-    continue-on-error: ${{ matrix.experimental }}
+    continue-on-error: ${{ matrix.allow-failure }}
     needs: test
 
     strategy:
       fail-fast: false
       matrix:
-        experimental: [false]
+        allow-failure: [false]
         ember-try-scenario:
           - ember-lts-3.16
           - ember-lts-3.20
@@ -53,11 +53,11 @@ jobs:
           - ember-classic
         include:
           - ember-try-scenario: ember-canary
-            experimental: true
+            allow-failure: true
           - ember-try-scenario: embroider
-            experimental: true
+            allow-failure: true
           - ember-try-scenario: embroider-optimized
-            experimental: true
+            allow-failure: true
 
     steps:
       - uses: actions/checkout@v2
