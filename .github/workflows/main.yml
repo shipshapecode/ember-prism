@@ -44,16 +44,21 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        experimental: [false]
         ember-try-scenario:
           - ember-lts-3.16
           - ember-lts-3.20
           - ember-release
           - ember-beta
-          - ember-canary
           - ember-default-with-jquery
           - ember-classic
-          - embroider
-          - embroider-optimized
+        include:
+          - ember-try-scenario: ember-canary
+            experimental: true
+          - ember-try-scenario: embroider
+            experimental: true
+          - ember-try-scenario: embroider-optimized
+            experimental: true
 
     steps:
       - uses: actions/checkout@v2
