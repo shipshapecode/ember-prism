@@ -1,7 +1,5 @@
 'use strict';
 
-var fs = require('fs');
-
 module.exports = {
   name: require('./package').name,
   included() {
@@ -49,10 +47,8 @@ module.exports = {
 
           fileExtensions.forEach((fileExtension) => {
             const nodeAssetsPath = `plugins/${plugin}/prism-${plugin}.${fileExtension}`;
-            const file = `node_modules/prismjs/${nodeAssetsPath}`;
 
-
-            if (fs.existsSync(file)) {
+            if (maybeResolve(`prismjs/${nodeAssetsPath}`)) {
               this.plugins.push(nodeAssetsPath);
             }
           });
@@ -79,6 +75,17 @@ module.exports = {
   }
 };
 
+function maybeResolve(path) {
+  try {
+    return require.resolve(path);
+  } catch (error) {
+    if (error.code === 'MODULE_NOT_FOUND') {
+      return null;
+    } else {
+      throw error;
+    }
+  }
+}
 
 // Polyfill [Addon._findHost](https://ember-cli.com/api/classes/Addon.html#method__findHost) for older versions of ember-cli
 function findHost(addon) {
