@@ -1,3 +1,16 @@
+## v0.9.1 (2021-03-09)
+
+#### :rocket: Enhancement
+* [#236](https://github.com/shipshapecode/ember-prism/pull/236) Use `require.resolve()` to check if Prism plugin files exist ([@Turbo87](https://github.com/Turbo87))
+
+#### :house: Internal
+* [#185](https://github.com/shipshapecode/ember-prism/pull/185) Switch to GitHub actions ([@rwwagner90](https://github.com/rwwagner90))
+
+#### Committers: 3
+- Robert Wagner ([@rwwagner90](https://github.com/rwwagner90))
+- Tobias Bieniek ([@Turbo87](https://github.com/Turbo87))
+- [@dependabot-preview[bot]](https://github.com/apps/dependabot-preview)
+
 ## v0.9.0 (2020-10-12)
 
 #### :house: Internal
