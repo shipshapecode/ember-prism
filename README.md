@@ -38,11 +38,11 @@ $ ember install ember-prism
 We have two main components, `code-block`, and `code-inline`. They'll take care of running Prism on your code as you transition.
 
 They accept the code to be rendered by passing a `@code` argument:
- 
+
 ```hbs
 <CodeBlock @code="<a href='link'>value</a>" @language="markup" />
-``` 
- 
+```
+
 While both variants support all features, the former is preferable when the code content is subject to changes (re-rendering).
 For the latter you may need to use `&lt;`, and `&gt;` html attributes to escape `<`, and `>` characters so they aren't removed by Handlebars.
 
@@ -64,6 +64,17 @@ var app = new EmberApp({
 ```
 
 If you want to use the default theme, just remove the `theme` option completely.
+
+If you want hi-fi Glimmer / Ember highlighting, specify:
+```js
+components: ['markup'],
+```
+and somewhere in your app:
+```js
+import { setup } from 'ember-prism';
+
+setup();
+```
 
 ## Running Locally
 
