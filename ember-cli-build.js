@@ -7,6 +7,7 @@ module.exports = function(defaults) {
     'ember-prism': {
       components: [
         'handlebars',
+        'markup',
         'markup-templating'
       ],
       plugins: [

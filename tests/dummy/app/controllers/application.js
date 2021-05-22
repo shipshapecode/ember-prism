@@ -1,4 +1,7 @@
 import Controller from '@ember/controller';
+import { setup } from 'ember-prism';
+
+setup();
 
 export default class ApplicationController extends Controller {
   canYouDigIt = `
@@ -9,9 +12,14 @@ export default class ApplicationController extends Controller {
   hbsExample = `
   {{!-- app/components/panel.hbs --}}
 
-  {{#if this.isAdmin}}
-    <Panel::Admin />
-  {{else}}
-    <Panel::NonAdmin />
-  {{/if}}`;
+  <Panel @user={{@name}} {{modifier 1 true}}>
+    <:admin>
+      {{#if this.isSuperUser}}
+        <Controls::Extra />
+      {{/if}}
+    </:admin>
+    <:nonAdmin>
+      No Controls
+    </:nonAdmin>
+  </Panel>`;
 }
