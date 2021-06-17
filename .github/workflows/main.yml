@@ -70,9 +70,9 @@ jobs:
         continue-on-error: ${{ matrix.allow-failure }}
 
   automerge:
-  needs: [test, floating-dependencies, try-scenarios]
-  runs-on: ubuntu-latest
-  steps:
-    - uses: fastify/github-action-merge-dependabot@v2.0.0
-      with:
-        github-token: ${{secrets.GITHUB_TOKEN}}
+    needs: [test, floating-dependencies, try-scenarios]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: fastify/github-action-merge-dependabot@v2.0.0
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
