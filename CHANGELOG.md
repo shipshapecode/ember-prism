@@ -1,3 +1,17 @@
+Version 9 of Highlight.js has reached EOL and is no longer supported.
+Please upgrade or ask whatever dependency you are using to upgrade.
+https://github.com/highlightjs/highlight.js/issues/2877
+
+## v0.10.0 (2021-07-28)
+
+#### :rocket: Enhancement
+* [#279](https://github.com/shipshapecode/ember-prism/pull/279) Hifi glimmer ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 3
+- Robert Wagner ([@rwwagner90](https://github.com/rwwagner90))
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+- [@dependabot-preview[bot]](https://github.com/apps/dependabot-preview)
+
 ## v0.9.1 (2021-03-09)
 
 #### :rocket: Enhancement
