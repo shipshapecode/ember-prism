@@ -51,11 +51,11 @@ jobs:
           - ember-canary
           - ember-default-with-jquery
           - ember-classic
-          - embroider-safe
-          - embroider-optimized
-        # include:
-        #   - ember-try-scenario: ember-canary
-        #     allow-failure: true
+        include:
+          - ember-try-scenario: embroider-safe
+            allow-failure: true
+          - ember-try-scenario: embroider-optimized
+            allow-failure: true  
 
     steps:
       - uses: actions/checkout@v2
