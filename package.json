@@ -34,11 +34,11 @@
     "test:ember-compatibility": "ember try:each"
   },
   "dependencies": {
-    "@ember/render-modifiers": "^1.0.2",
+    "ember-auto-import": "^1.11.3",
     "ember-cli-babel": "^7.22.1",
     "ember-cli-htmlbars": "^5.3.1",
-    "ember-auto-import": "^1.11.3",
     "ember-cli-node-assets": "^0.2.2",
+    "ember-ref-bucket": "^3.0.0",
     "prismjs": "^1.22.0",
     "prismjs-glimmer": "^1.1.1"
   },
@@ -69,7 +69,7 @@
     "loader.js": "^4.7.0",
     "npm-run-all": "^4.1.5",
     "qunit-dom": "^1.5.0",
-    "release-it": "^14.1.0",
+    "release-it": "^14.11.5",
     "release-it-lerna-changelog": "^3.1.0"
   },
   "engines": {
