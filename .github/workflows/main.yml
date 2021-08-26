@@ -50,10 +50,9 @@ jobs:
           - ember-beta
           - ember-default-with-jquery
           - ember-classic
+          - embroider-safe
         include:
           - ember-try-scenario: ember-canary
-            allow-failure: true
-          - ember-try-scenario: embroider
             allow-failure: true
           - ember-try-scenario: embroider-optimized
             allow-failure: true
