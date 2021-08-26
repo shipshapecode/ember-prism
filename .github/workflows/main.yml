@@ -48,14 +48,14 @@ jobs:
           - ember-lts-3.24
           - ember-release
           - ember-beta
+          - ember-canary
           - ember-default-with-jquery
           - ember-classic
           - embroider-safe
-        include:
-          - ember-try-scenario: ember-canary
-            allow-failure: true
-          - ember-try-scenario: embroider-optimized
-            allow-failure: true
+          - embroider-optimized
+        # include:
+        #   - ember-try-scenario: ember-canary
+        #     allow-failure: true
 
     steps:
       - uses: actions/checkout@v2
