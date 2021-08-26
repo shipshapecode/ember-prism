@@ -5616,10 +5616,9 @@ ember-qunit@^5.1.4:
     silent-error "^1.1.1"
     validate-peer-dependencies "^1.1.0"
 
-ember-ref-bucket@^3.0.0:
+ember-ref-bucket@rwwagner90/ember-ref-bucket#7791641791f63358764e5a51ae148652d59e821e:
   version "3.0.0"
-  resolved "https://registry.yarnpkg.com/ember-ref-bucket/-/ember-ref-bucket-3.0.0.tgz#937bdfbeb8bc195bea6ce1e1702b57654db55089"
-  integrity sha512-dTAds4uqpnd0vYoOEEfl8A+9b+qj2eJAgulL58qVRHhx2oIjX4JeXSUK8E4l1LTkSo8DKxH5VfdxKowI1ZUgPA==
+  resolved "https://codeload.github.com/rwwagner90/ember-ref-bucket/tar.gz/7791641791f63358764e5a51ae148652d59e821e"
   dependencies:
     ember-cli-babel "^7.22.1"
     ember-cli-htmlbars "^5.3.1"
