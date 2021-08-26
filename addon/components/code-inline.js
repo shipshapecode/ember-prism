@@ -34,7 +34,6 @@ export default class CodeInlineComponent extends Component {
       const code = this.code;
       const language = this.language;
       const grammar = Prism.languages[language];
-   
 
       if (code && language && grammar) {
         prismCode = htmlSafe(Prism.highlight(code, grammar, language));
