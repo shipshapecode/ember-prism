@@ -13,10 +13,10 @@ module.exports = {
     if (app.options && app.options['ember-prism']) {
       const options = app.options['ember-prism'];
       const components = options.components;
-      const plugins = (options.plugins || []);
+      const plugins = options.plugins || [];
       const theme = options.theme;
 
-      if(!plugins.includes('normalize-whitespace')) {
+      if (!plugins.includes('normalize-whitespace')) {
         plugins.push('normalize-whitespace');
       }
 
@@ -32,7 +32,6 @@ module.exports = {
 
       if (plugins) {
         plugins.forEach((plugin) => {
-
           /**
            * Most Prism plugins contains both a js file and a css file, but there
            * are exception. `highlight-keywords` for instance, does not have a
@@ -42,7 +41,7 @@ module.exports = {
            * before calling `app.import()`.
            */
 
-            // file extensions to be tested for existence.
+          // file extensions to be tested for existence.
           const fileExtensions = ['js', 'css'];
 
           fileExtensions.forEach((fileExtension) => {
@@ -52,7 +51,6 @@ module.exports = {
               this.plugins.push(nodeAssetsPath);
             }
           });
-
         });
       }
     }
@@ -65,14 +63,14 @@ module.exports = {
     nodeAssets: {
       prismjs() {
         return {
-          import: [
-            'prism.js',
-            this.theme
-          ].concat(this.components, this.plugins)
+          import: ['prism.js', this.theme].concat(
+            this.components,
+            this.plugins
+          ),
         };
-      }
-    }
-  }
+      },
+    },
+  },
 };
 
 function maybeResolve(path) {

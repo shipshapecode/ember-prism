@@ -44,19 +44,18 @@ jobs:
       matrix:
         allow-failure: [false]
         ember-try-scenario:
-          - ember-lts-3.16
           - ember-lts-3.20
+          - ember-lts-3.24
           - ember-release
           - ember-beta
+          - ember-canary
           - ember-default-with-jquery
           - ember-classic
         include:
-          - ember-try-scenario: ember-canary
-            allow-failure: true
-          - ember-try-scenario: embroider
+          - ember-try-scenario: embroider-safe
             allow-failure: true
           - ember-try-scenario: embroider-optimized
-            allow-failure: true
+            allow-failure: true  
 
     steps:
       - uses: actions/checkout@v2
