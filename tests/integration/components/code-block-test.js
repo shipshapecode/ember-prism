@@ -54,4 +54,23 @@ module('Integration | Component | code-block', function (hooks) {
     assert.dom('code').hasText(code2);
     assert.dom('code > .tag').hasText('<p class="bar">');
   });
+
+  test('takes a @start param to apply on the <pre> element ', async function (assert) {
+    /*
+      https://stackoverflow.com/questions/532073/how-can-i-read-the-applied-css-counter-value
+      the counter is rendered using the css :before selector meaning we cannot assert on the value
+      ie. we don't assert on the value 1000, 1001, etc.. in the example below
+    */
+    const code =
+      '<p>line 1</p>\n<p>line 2</p>\n<p>line 3</p>\n<p>line 4</p>\n<p>line 5</p>\n';
+    const lineStartNumber = 1000;
+    this.set('code', code);
+    this.set('start', lineStartNumber);
+    await render(hbs`
+      <CodeBlock @language="html" @code={{this.code}} @start={{this.start}} class="line-numbers"/>
+    `);
+
+    assert.dom('code .line-numbers-rows').exists();
+    assert.dom('pre').hasAttribute('data-start', `${lineStartNumber}`);
+  });
 });
