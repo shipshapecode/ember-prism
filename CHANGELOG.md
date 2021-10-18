@@ -3,6 +3,15 @@ Please upgrade or ask whatever dependency you are using to upgrade.
 https://github.com/highlightjs/highlight.js/issues/2877
 
 
+
+## v0.12.0 (2021-10-18)
+
+#### :house: Internal
+* [#375](https://github.com/shipshapecode/ember-prism/pull/375) Convert back to render modifiers ([@rwwagner90](https://github.com/rwwagner90))
+
+#### Committers: 1
+- Robert Wagner ([@rwwagner90](https://github.com/rwwagner90))
+
 ## v0.11.0 (2021-08-26)
 
 #### :rocket: Enhancement
