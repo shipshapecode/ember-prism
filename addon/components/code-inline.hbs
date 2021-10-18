@@ -1,7 +1,8 @@
 <code
   ...attributes
   class="{{this.languageClass}}"
-  {{create-ref "codeElement" bucket=this tracked=true}}
+  {{did-insert this.setPrismCode}}
+  {{did-update this.setPrismCode this.code @language}}
 >
   {{~! ~}}{{this.prismCode}}{{~! ~}}
 </code>
