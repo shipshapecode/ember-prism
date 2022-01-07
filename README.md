@@ -28,7 +28,7 @@ Installation
 Install the ember-cli addon in your ember-cli project:
 
 ```shell
-$ ember install ember-prism
+ember install ember-prism
 ```
 
 ## Usage
