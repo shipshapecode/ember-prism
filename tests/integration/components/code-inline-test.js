@@ -12,6 +12,6 @@ module('Integration | Component | code-inline', function (hooks) {
 
     await render(hbs`<CodeInline @code=""/>`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.deepEqual(this.element.textContent.trim(), '');
   });
 });

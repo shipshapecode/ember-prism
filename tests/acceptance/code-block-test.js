@@ -19,7 +19,7 @@ module('Acceptance | code block', function (hooks) {
   test('the pre innerHTML is trimmed when rendered', async function (assert) {
     await visit('/');
 
-    assert.equal(
+    assert.deepEqual(
       find('pre code.can-you-dig-it').innerHTML.split('\n').length,
       3
     );
