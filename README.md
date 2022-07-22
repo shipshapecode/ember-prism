@@ -48,6 +48,29 @@ For the latter you may need to use `&lt;`, and `&gt;` html attributes to escape 
 
 The `@language` argument is optional, and if passed should match one of Prism's [supported languages](https://prismjs.com/#supported-languages).
 
+#### Overriding Line Numbers
+
+If you have opted to use the `line-numbers` plugin within your `ember-cli-build.js`, then you can optionally pass in `@start` to `<CodeBlock/>` to set a custom starting line.  This is particularly useful when showing "contiguous" *hunks* of code (while not showing the *entire* code file).
+
+(within `ember-cli-build.js`):
+```js
+module.exports = function (defaults) {
+  let app = new EmberAddon(defaults, {
+    // other options
+    'ember-prism': {
+      plugins: ['line-numbers']
+    },
+  });
+};
+```
+
+(in your component that renders a `<CodeBlock />`)
+```hbs
+<CodeBlock @code={{this.vulnerability.code}} @start={{this.vulnerability.startLineNumber}} />
+```
+
+This will result in the code block starting its line numbering from `this.vulnerability.startLineNumber`, instead of `1`.
+
 ### Configuration
 
 You can set which theme, components, and plugins you'd like to use from Prism.
