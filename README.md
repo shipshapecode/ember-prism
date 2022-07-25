@@ -66,10 +66,10 @@ module.exports = function (defaults) {
 
 (in your component that renders a `<CodeBlock />`)
 ```hbs
-<CodeBlock @code={{this.vulnerability.code}} @start={{this.vulnerability.startLineNumber}} />
+<CodeBlock @code="<html lang='en'>" @start={{2}} />
 ```
 
-This will result in the code block starting its line numbering from `this.vulnerability.startLineNumber`, instead of `1`.
+This will result in the code block starting its line numbering from `2`, instead of `1`.
 
 ### Configuration
 
