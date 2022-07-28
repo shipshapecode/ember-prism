@@ -4,6 +4,23 @@ https://github.com/highlightjs/highlight.js/issues/2877
 
 
 
+
+## v0.13.0 (2022-07-28)
+
+#### :rocket: Enhancement
+* [#554](https://github.com/shipshapecode/ember-prism/pull/554) feat: add @start to CodeBlock for custom line number start ([@srsgores](https://github.com/srsgores))
+
+#### :memo: Documentation
+* [#435](https://github.com/shipshapecode/ember-prism/pull/435) Update README.md ([@amyrlam](https://github.com/amyrlam))
+
+#### :house: Internal
+* [#456](https://github.com/shipshapecode/ember-prism/pull/456) Ember 4.1 ([@rwwagner90](https://github.com/rwwagner90))
+
+#### Committers: 3
+- Amy Lam ([@amyrlam](https://github.com/amyrlam))
+- Robert Wagner ([@rwwagner90](https://github.com/rwwagner90))
+- Sean Goresht ([@srsgores](https://github.com/srsgores))
+
 ## v0.12.0 (2021-10-18)
 
 #### :house: Internal
