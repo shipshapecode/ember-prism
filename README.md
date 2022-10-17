@@ -1,4 +1,4 @@
-# Ember-prism
+# ember-prism
 
 <a href="https://shipshape.io/"><img src="http://i.imgur.com/DWHQjA5.png" alt="Ship Shape" width="100" height="100"/></a>
 
@@ -12,18 +12,15 @@
 This project aims to make re-usable ember components for [PrismJS](http://prismjs.com/).
 This project is packaged as an [EmberCLI](http://www.ember-cli.com) addon.
 
-Compatibility
-------------------------------------------------------------------------------
+## Compatibility
 
 * Ember.js v3.24 or above
 * Ember CLI v3.24 or above
-* Node.js v12 or above
+* Node.js v14 or above
 
 For Ember <= 3.12 use version 0.7.0 of ember-prism.
 
-
-Installation
-------------------------------------------------------------------------------
+## Installation
 
 Install the ember-cli addon in your ember-cli project:
 
@@ -115,13 +112,11 @@ setup();
 * `ember serve`
 * Visit the dummy application at [http://localhost:4200](http://localhost:4200).
 
-Contributing
-------------------------------------------------------------------------------
+## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
 
 
-License
-------------------------------------------------------------------------------
+## License
 
 This project is licensed under the [MIT License](LICENSE.md).
