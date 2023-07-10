@@ -16,7 +16,7 @@ This project is packaged as an [EmberCLI](http://www.ember-cli.com) addon.
 
 * Ember.js v4.4 or above
 * Ember CLI v4.4 or above
-* Node.js v14 or above
+* Node.js v16 or above
 
 For Ember <= 3.12 use version 0.7.0 of ember-prism.
 
