@@ -1249,12 +1249,12 @@
     ember-cli-version-checker "^5.1.2"
     semver "^7.3.5"
 
-"@embroider/addon-shim@^1.8.6":
-  version "1.8.6"
-  resolved "https://registry.yarnpkg.com/@embroider/addon-shim/-/addon-shim-1.8.6.tgz#b676991b4fa32c3a98dc7db7dc6cd655029c3f09"
-  integrity sha512-siC9kP78uucEbpDcVyxjkwa76pcs5rVzDVpWO4PDc9EAXRX+pzmUuSTLAK3GztUwx7/PWhz1BenAivqdSvSgfg==
+"@embroider/addon-shim@^1.8.6", "@embroider/addon-shim@^1.8.7":
+  version "1.8.7"
+  resolved "https://registry.yarnpkg.com/@embroider/addon-shim/-/addon-shim-1.8.7.tgz#ba2dcb0647ed2cb0c500c835326266b89ceec595"
+  integrity sha512-JGOQNRj3UR0NdWEg8MsM2eqPLncEwSB1IX+rwntIj22TEKj8biqx7GDgSbeH+ZedijmCh354Hf2c5rthrdzUAw==
   dependencies:
-    "@embroider/shared-internals" "^2.2.3"
+    "@embroider/shared-internals" "^2.5.1"
     broccoli-funnel "^3.0.8"
     semver "^7.3.8"
 
@@ -1272,10 +1272,25 @@
     resolve "^1.20.0"
     semver "^7.3.2"
 
-"@embroider/shared-internals@2.4.0", "@embroider/shared-internals@^2.0.0", "@embroider/shared-internals@^2.2.3":
+"@embroider/shared-internals@2.4.0", "@embroider/shared-internals@^2.0.0":
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/@embroider/shared-internals/-/shared-internals-2.4.0.tgz#0e9fdb0b2df9bad45fab8c54cbb70d8a2cbf01fc"
   integrity sha512-pFE05ebenWMC9XAPRjadYCXXb6VmqjkhYN5uqkhPo+VUmMHnx7sZYYxqGjxfVuhC/ghS/BNlOffOCXDOoE7k7g==
+  dependencies:
+    babel-import-util "^2.0.0"
+    debug "^4.3.2"
+    ember-rfc176-data "^0.3.17"
+    fs-extra "^9.1.0"
+    js-string-escape "^1.0.1"
+    lodash "^4.17.21"
+    resolve-package-path "^4.0.1"
+    semver "^7.3.5"
+    typescript-memoize "^1.0.1"
+
+"@embroider/shared-internals@^2.5.1":
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/@embroider/shared-internals/-/shared-internals-2.5.1.tgz#a4d8c057cbff293ef6eb29ee6537f263d206b444"
+  integrity sha512-b+TWDBisH1p6HeTbJIO8pgu1WzfTP0ZSAlZBqjXwOyrS0ZxP1qNYRrEX+IxyzIibEFjXBxeLakiejz3DJvZX5A==
   dependencies:
     babel-import-util "^2.0.0"
     debug "^4.3.2"
@@ -4923,11 +4938,12 @@ ember-modifier-manager-polyfill@^1.2.0:
     ember-compatibility-helpers "^1.2.0"
 
 ember-page-title@^8.0.0:
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/ember-page-title/-/ember-page-title-8.1.0.tgz#fd3e5b1547ae9e1d775cc225307aeeb51b01aae7"
-  integrity sha512-c5V4sWu+OSRhN6Fsa0M71PkdNpKkV7Lg9FwqogK3iE++R43G6ySLV/Ls0cE5K+IWS1om7XSPqcUvkfhrfZ3y0g==
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/ember-page-title/-/ember-page-title-8.2.0.tgz#1fbfcf3a8c29edd2b7ce6e9f0df25279b26db7b2"
+  integrity sha512-8t6kJ4V47BLccXH5I/0h86MG0TqwGi7UDxbLGn8yudg8Hit3iAkB3YrN2378uLUluYZM8KBxu1NsrMRsxhi48A==
   dependencies:
-    "@embroider/addon-shim" "^1.8.6"
+    "@embroider/addon-shim" "^1.8.7"
+    "@simple-dom/document" "^1.4.0"
 
 ember-qunit@^8.0.1:
   version "8.0.2"
