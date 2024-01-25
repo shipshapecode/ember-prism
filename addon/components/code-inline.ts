@@ -5,7 +5,14 @@ import { htmlSafe } from '@ember/template';
 import { tracked } from '@glimmer/tracking';
 import { assert } from '@ember/debug';
 
-export default class CodeInlineComponent extends Component {
+interface CodeInlineSignature {
+  Args: {
+    code: string;
+    language: string;
+  }
+}
+
+export default class CodeInlineComponent extends Component<CodeInlineSignature> {
   @tracked prismCode = '';
 
   get code() {

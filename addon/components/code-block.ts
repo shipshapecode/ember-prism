@@ -1,6 +1,13 @@
 import Component from '@glimmer/component';
 
-export default class CodeBlockComponent extends Component {
+interface CodeBlockSignature {
+  Args: {
+    code: string;
+    language: string;
+  };
+}
+
+export default class CodeBlockComponent extends Component<CodeBlockSignature> {
   get language() {
     return this.args.language ?? 'markup';
   }
