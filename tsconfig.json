@@ -14,5 +14,8 @@
       "ember-prism/test-support/*": ["addon-test-support/*"],
       "*": ["types/*"]
     }
+  },
+  "glint": {
+    "environment": "ember-loose"
   }
 }

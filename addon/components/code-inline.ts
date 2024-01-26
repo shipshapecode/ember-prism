@@ -10,8 +10,9 @@ declare const Prism: any;
 interface CodeInlineSignature {
   Args: {
     code: string;
-    language: string;
+    language?: string;
   };
+  Element: HTMLElement;
 }
 
 export default class CodeInlineComponent extends Component<CodeInlineSignature> {
@@ -59,5 +60,11 @@ export default class CodeInlineComponent extends Component<CodeInlineSignature> 
       code,
       element,
     });
+  }
+}
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    CodeInline: typeof CodeInlineComponent;
   }
 }
