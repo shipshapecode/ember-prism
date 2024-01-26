@@ -1,15 +1,17 @@
-/* global Prism */
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
 import { htmlSafe } from '@ember/template';
 import { tracked } from '@glimmer/tracking';
 import { assert } from '@ember/debug';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+declare const Prism: any;
+
 interface CodeInlineSignature {
   Args: {
     code: string;
     language: string;
-  }
+  };
 }
 
 export default class CodeInlineComponent extends Component<CodeInlineSignature> {
@@ -44,7 +46,9 @@ export default class CodeInlineComponent extends Component<CodeInlineSignature> 
     const grammar = Prism.languages[language];
 
     if (code && language && grammar) {
-      this.prismCode = htmlSafe(Prism.highlight(code, grammar, language));
+      this.prismCode = htmlSafe(
+        Prism.highlight(code, grammar, language)
+      ) as unknown as string;
     } else {
       this.prismCode = '';
     }
