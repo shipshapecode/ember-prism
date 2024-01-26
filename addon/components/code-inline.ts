@@ -38,7 +38,7 @@ export default class CodeInlineComponent extends Component<CodeInlineSignature> 
   }
 
   @action
-  setPrismCode(element) {
+  setPrismCode(element: Element) {
     const code = this.code;
     const language = this.language;
     const grammar = Prism.languages[language];
