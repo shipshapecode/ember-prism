@@ -93,8 +93,10 @@
     "ember-source": ">= 4.0.0"
   },
   "engines": {
-    "node": ">= 18"
+    "node": "18.* || >= 20",
+    "pnpm": "^8.14.1"
   },
+  "packageManager": "^pnpm@8.14.1",
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
