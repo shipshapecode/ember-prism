@@ -90,7 +90,7 @@
     "webpack": "^5.89.0"
   },
   "peerDependencies": {
-    "ember-source": "^4.0.0"
+    "ember-source": ">= 4.0.0"
   },
   "engines": {
     "node": ">= 18"
@@ -118,9 +118,5 @@
       "release": true,
       "tokenRef": "GITHUB_AUTH"
     }
-  },
-  "volta": {
-    "node": "12.22.1",
-    "yarn": "1.22.10"
   }
 }
