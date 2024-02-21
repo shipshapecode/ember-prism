@@ -21,7 +21,7 @@ module('Acceptance | code block', function (hooks) {
 
     assert.deepEqual(
       find('pre code.can-you-dig-it').innerHTML.split('\n').length,
-      3
+      3,
     );
   });
 });
