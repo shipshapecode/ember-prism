@@ -66,3 +66,14 @@ jobs:
           node-version: 18
       - name: Run Tests
         run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }}
+
+  automerge:
+    needs: [test, try-scenarios]
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: write
+    steps:
+      - uses: fastify/github-action-merge-dependabot@v3.2.0
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
