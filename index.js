@@ -60,6 +60,7 @@ module.exports = {
     this._super.included.apply(this, arguments);
   },
   options: {
+    'ember-cli-babel': { enableTypeScriptTransform: true },
     nodeAssets: {
       prismjs() {
         return {

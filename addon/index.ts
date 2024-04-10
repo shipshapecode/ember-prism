@@ -1,5 +1,7 @@
-/* globals Prism */
 import { setup as glimmer } from 'prismjs-glimmer';
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+declare const Prism: any;
 
 export function setup() {
   glimmer(Prism);

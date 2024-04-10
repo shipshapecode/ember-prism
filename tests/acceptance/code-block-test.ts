@@ -20,7 +20,7 @@ module('Acceptance | code block', function (hooks) {
     await visit('/');
 
     assert.deepEqual(
-      find('pre code.can-you-dig-it').innerHTML.split('\n').length,
+      find('pre code.can-you-dig-it')?.innerHTML.split('\n').length,
       3,
     );
   });

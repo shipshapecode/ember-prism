@@ -1,12 +1,22 @@
-/* global Prism */
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
-import { htmlSafe } from '@ember/template';
+import { htmlSafe, type SafeString } from '@ember/template';
 import { tracked } from '@glimmer/tracking';
 import { assert } from '@ember/debug';
 
-export default class CodeInlineComponent extends Component {
-  @tracked prismCode = '';
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+declare const Prism: any;
+
+interface CodeInlineSignature {
+  Args: {
+    code: string;
+    language?: string;
+  };
+  Element: HTMLElement;
+}
+
+export default class CodeInlineComponent extends Component<CodeInlineSignature> {
+  @tracked prismCode: string | SafeString = '';
 
   get code() {
     const code = this.args.code;
@@ -31,7 +41,7 @@ export default class CodeInlineComponent extends Component {
   }
 
   @action
-  setPrismCode(element) {
+  setPrismCode(element: Element) {
     const code = this.code;
     const language = this.language;
     const grammar = Prism.languages[language];
@@ -48,5 +58,11 @@ export default class CodeInlineComponent extends Component {
       code,
       element,
     });
+  }
+}
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    CodeInline: typeof CodeInlineComponent;
   }
 }
