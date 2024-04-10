@@ -19,17 +19,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Install Node
-        uses: actions/setup-node@v3
+      - uses: wyvox/action-setup-pnpm@v3
         with:
-          node-version: 16
-          cache: yarn
-      - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+          node-version: 18
       - name: Lint
-        run: yarn lint
+        run: pnpm lint
       - name: Run Tests
-        run: yarn test:ember
+        run: pnpm test:ember
 
   floating:
     name: "Floating Dependencies"
@@ -38,14 +34,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: wyvox/action-setup-pnpm@v3
         with:
-          node-version: 16
-          cache: yarn
-      - name: Install Dependencies
-        run: yarn install --no-lockfile
+          node-version: 18
+          args: '--no-lockfile'
       - name: Run Tests
-        run: yarn test:ember
+        run: pnpm test:ember
 
   try-scenarios:
     name: ${{ matrix.try-scenario }}
@@ -57,8 +51,8 @@ jobs:
       fail-fast: false
       matrix:
         try-scenario:
-          - ember-lts-4.4
           - ember-lts-4.8
+          - ember-lts-4.12
           - ember-release
           - ember-beta
           - ember-canary
@@ -67,18 +61,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Install Node
-        uses: actions/setup-node@v3
+      - uses: wyvox/action-setup-pnpm@v3
         with:
-          node-version: 16
-          cache: yarn
-      - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+          node-version: 18
       - name: Run Tests
         run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }}
 
   automerge:
-    needs: [test, floating, try-scenarios]
+    needs: [test, try-scenarios]
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
@@ -86,4 +76,4 @@ jobs:
     steps:
       - uses: fastify/github-action-merge-dependabot@v3.2.0
         with:
-          github-token: ${{secrets.GITHUB_TOKEN}} 
+          github-token: ${{secrets.GITHUB_TOKEN}}

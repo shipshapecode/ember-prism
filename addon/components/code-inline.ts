@@ -23,7 +23,7 @@ export default class CodeInlineComponent extends Component<CodeInlineSignature> 
 
     assert(
       "ember-prism's <CodeBlock/> and <CodeInline/> components require a `code` parameter to be passed in.",
-      code !== undefined
+      code !== undefined,
     );
     if (Prism?.plugins?.NormalizeWhitespace) {
       return Prism.plugins.NormalizeWhitespace.normalize(code);

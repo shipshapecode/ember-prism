@@ -66,7 +66,7 @@ module.exports = {
         return {
           import: ['prism.js', this.theme].concat(
             this.components,
-            this.plugins
+            this.plugins,
           ),
         };
       },
