@@ -48,7 +48,7 @@ export default class CodeInlineComponent extends Component<CodeInlineSignature> 
 
     if (code && language && grammar) {
       this.prismCode = htmlSafe(
-        Prism.highlight(code, grammar, language)
+        Prism.highlight(code, grammar, language),
       ) as unknown as string;
     } else {
       this.prismCode = '';
