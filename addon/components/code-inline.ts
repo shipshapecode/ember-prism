@@ -1,6 +1,6 @@
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
-import { htmlSafe } from '@ember/template';
+import { htmlSafe, type SafeString } from '@ember/template';
 import { tracked } from '@glimmer/tracking';
 import { assert } from '@ember/debug';
 
@@ -16,7 +16,7 @@ interface CodeInlineSignature {
 }
 
 export default class CodeInlineComponent extends Component<CodeInlineSignature> {
-  @tracked prismCode = '';
+  @tracked prismCode: string | SafeString = '';
 
   get code() {
     const code = this.args.code;
@@ -47,9 +47,7 @@ export default class CodeInlineComponent extends Component<CodeInlineSignature> 
     const grammar = Prism.languages[language];
 
     if (code && language && grammar) {
-      this.prismCode = htmlSafe(
-        Prism.highlight(code, grammar, language),
-      ) as unknown as string;
+      this.prismCode = htmlSafe(Prism.highlight(code, grammar, language));
     } else {
       this.prismCode = '';
     }
