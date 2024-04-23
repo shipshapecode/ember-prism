@@ -213,7 +213,7 @@ devDependencies:
     version: 2.20.1
   qunit-dom:
     specifier: ^3.0.0
-    version: 3.1.1
+    version: 3.1.2
   release-it:
     specifier: ^15.5.0
     version: 15.11.0
@@ -10758,8 +10758,8 @@ packages:
       rimraf: 2.7.1
       underscore.string: 3.3.6
 
-  /qunit-dom@3.1.1:
-    resolution: {integrity: sha512-Ja2NK+LsQM4iDU5QFtkwbLEbETgr6+7wTf7t6DXW3hWhB6GmAtKA2r3eLnmXpSdncMnoBsedXSKfjM0iMTOUGQ==}
+  /qunit-dom@3.1.2:
+    resolution: {integrity: sha512-urHvzhDxihYrMBpsT/Fk7So79CPfvS0ZwZw2VPA+0JV1Q1XP2IhDg/PLHTt+r2j7787iQAOpILx2GjwAa6CpnA==}
     dev: true
 
   /qunit@2.20.1:
