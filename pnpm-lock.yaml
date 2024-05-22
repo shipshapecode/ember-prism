@@ -192,7 +192,7 @@ devDependencies:
     version: 9.1.0(eslint@8.57.0)
   eslint-plugin-ember:
     specifier: ^12.0.2
-    version: 12.1.0(@babel/core@7.24.5)(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)
+    version: 12.1.1(@babel/core@7.24.5)(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)
   eslint-plugin-n:
     specifier: ^17.0.0
     version: 17.7.0(eslint@8.57.0)
@@ -6018,8 +6018,8 @@ packages:
       - '@babel/core'
       - supports-color
 
-  /ember-eslint-parser@0.4.2(@babel/core@7.24.5)(@typescript-eslint/parser@6.21.0)(eslint@8.57.0):
-    resolution: {integrity: sha512-DcKLI+2RgznicKOnxFAW/5ABGEk8JMCADw56wy1hvD/r1vNIIZZnoJC7rowx9XenPBhB75kt3/4ApaHxeYr2sA==}
+  /ember-eslint-parser@0.4.3(@babel/core@7.24.5)(@typescript-eslint/parser@6.21.0)(eslint@8.57.0):
+    resolution: {integrity: sha512-wMPoaaA+i/F/tPPxURRON9XXJH5MRUOZ5x/9CVJTSpL+0n4EWphyztb20gR+ZJeShnOACQpAdFy6YSS1/JSHKw==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       '@babel/core': ^7.23.6
@@ -6547,8 +6547,8 @@ packages:
     resolution: {integrity: sha512-Uk/TVLt6Nf6Xoz7C1iYuZjOSdJxe5aaauGRke8JhKeJwD66Y61/pY2FjtLP04Ooq9PwV34bzrkKkU2UZ5FtDRA==}
     dev: true
 
-  /eslint-plugin-ember@12.1.0(@babel/core@7.24.5)(@typescript-eslint/parser@6.21.0)(eslint@8.57.0):
-    resolution: {integrity: sha512-BJwa/uXXxlqHuzmMgTbnAXJG2O4RH3bksHtdY2h5ClZoo5kFRUtHeaofNnxiMn1bEinNluknrHi87zctgMo56A==}
+  /eslint-plugin-ember@12.1.1(@babel/core@7.24.5)(@typescript-eslint/parser@6.21.0)(eslint@8.57.0):
+    resolution: {integrity: sha512-95YWz2nVWtFHwrNlW8kpBivudieTHkiW3vlG3X1P24IpQLigVtPe14LDcZ/vPtEV92Ccao4xcKPKWWOeG0hSNQ==}
     engines: {node: 18.* || 20.* || >= 21}
     peerDependencies:
       '@typescript-eslint/parser': '*'
@@ -6560,7 +6560,7 @@ packages:
       '@ember-data/rfc395-data': 0.0.4
       '@typescript-eslint/parser': 6.21.0(eslint@8.57.0)(typescript@5.4.5)
       css-tree: 2.3.1
-      ember-eslint-parser: 0.4.2(@babel/core@7.24.5)(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)
+      ember-eslint-parser: 0.4.3(@babel/core@7.24.5)(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)
       ember-rfc176-data: 0.3.18
       eslint: 8.57.0
       eslint-utils: 3.0.0(eslint@8.57.0)
