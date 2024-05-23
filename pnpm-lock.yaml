@@ -57,7 +57,7 @@ devDependencies:
     version: 1.4.0
   '@tsconfig/ember':
     specifier: ^3.0.3
-    version: 3.0.7
+    version: 3.0.8
   '@types/ember':
     specifier: ^4.0.10
     version: 4.0.11(@babel/core@7.24.5)
@@ -2419,8 +2419,8 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
-  /@tsconfig/ember@3.0.7:
-    resolution: {integrity: sha512-T9H3VNlino2mo3wpAd9EqRwJyERvUKnJnIyiYuL7b3UvV+yQAt7f9np81liHpmBeBQ5z5NzegA5vJGpvCOtYsQ==}
+  /@tsconfig/ember@3.0.8:
+    resolution: {integrity: sha512-OVnIsZIt/8q0VEtcdz3rRryNrm6gdJTxXlxefkGIrkZnME0wqslmwHlUEZ7mvh377df9FqBhNKrYNarhCW8zJA==}
     dev: true
 
   /@types/body-parser@1.19.5:
