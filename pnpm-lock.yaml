@@ -170,8 +170,8 @@ devDependencies:
     specifier: ^8.0.2
     version: 8.0.2(@ember/test-helpers@3.3.0)(@glint/template@1.4.0)(ember-source@5.9.0)(qunit@2.21.0)
   ember-resolver:
-    specifier: ^11.0.1
-    version: 11.0.1(ember-source@5.9.0)
+    specifier: ^12.0.0
+    version: 12.0.0(ember-source@5.9.0)
   ember-source:
     specifier: ~5.9.0
     version: 5.9.0(@babel/core@7.24.7)(@glimmer/component@1.1.2)(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.91.0)
@@ -338,16 +338,6 @@ packages:
       lru-cache: 5.1.1
       semver: 6.3.1
     dev: false
-
-  /@babel/helper-compilation-targets@7.24.6:
-    resolution: {integrity: sha512-VZQ57UsDGlX/5fFA7GkVPplZhHsVc+vuErWgdOiysI9Ksnw0Pbbd6pnPiR/mmJyKHgyIW0c7KT32gmhiF+cirg==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/compat-data': 7.24.7
-      '@babel/helper-validator-option': 7.24.7
-      browserslist: 4.23.0
-      lru-cache: 5.1.1
-      semver: 6.3.1
 
   /@babel/helper-compilation-targets@7.24.7:
     resolution: {integrity: sha512-ctSdRHBi20qWOfy27RUb4Fhp07KSJ3sXcuSvTrXrc4aG8NSYDo1ici3Vhg9bg69y5bj0Mr1lh0aeEgTvc12rMg==}
@@ -5752,7 +5742,7 @@ packages:
     engines: {node: 6.* || 8.* || >= 10.*}
     dependencies:
       '@babel/core': 7.24.7
-      '@babel/helper-compilation-targets': 7.24.6
+      '@babel/helper-compilation-targets': 7.24.7
       '@babel/plugin-proposal-class-properties': 7.18.6(@babel/core@7.24.7)
       '@babel/plugin-proposal-decorators': 7.24.1(@babel/core@7.24.7)
       '@babel/plugin-proposal-private-methods': 7.18.6(@babel/core@7.24.7)
@@ -6272,8 +6262,8 @@ packages:
       - supports-color
     dev: true
 
-  /ember-resolver@11.0.1(ember-source@5.9.0):
-    resolution: {integrity: sha512-ucBk3oM+PR+AfYoSUXeQh8cDQS1sSiEKp4Pcgbew5cFMSqPxJfqd1zyZsfQKNTuyubeGmWxBOyMVSTvX2LeCyg==}
+  /ember-resolver@12.0.0(ember-source@5.9.0):
+    resolution: {integrity: sha512-JOD8Ja0wU8Q8ZX3NJwprgnbJKO7cbLtoaqHtFdkV4avkLAT8McLWYv82tp4j7EVsZsYhthRJV9jVsX+G/hm0Mg==}
     engines: {node: 14.* || 16.* || >= 18}
     peerDependencies:
       ember-source: ^4.8.3 || >= 5.0.0
