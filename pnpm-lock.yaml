@@ -13,7 +13,7 @@ dependencies:
     version: 2.1.0(@babel/core@7.24.7)(@glint/template@1.4.0)(ember-source@5.9.0)
   ember-auto-import:
     specifier: ^2.7.2
-    version: 2.7.3(@glint/template@1.4.0)(webpack@5.92.1)
+    version: 2.7.4(@glint/template@1.4.0)(webpack@5.92.1)
   ember-cli-babel:
     specifier: ^8.2.0
     version: 8.2.0(@babel/core@7.24.7)
@@ -1662,7 +1662,7 @@ packages:
       broccoli-debug: 0.6.5
       broccoli-funnel: 3.0.8
       dom-element-descriptors: 0.5.0
-      ember-auto-import: 2.7.3(@glint/template@1.4.0)(webpack@5.92.1)
+      ember-auto-import: 2.7.4(@glint/template@1.4.0)(webpack@5.92.1)
       ember-cli-babel: 7.26.11
       ember-cli-htmlbars: 6.3.0
       ember-source: 5.9.0(@babel/core@7.24.7)(@glimmer/component@1.1.2)(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.92.1)
@@ -5700,8 +5700,8 @@ packages:
   /electron-to-chromium@1.4.677:
     resolution: {integrity: sha512-erDa3CaDzwJOpyvfKhOiJjBVNnMM0qxHq47RheVVwsSQrgBA9ZSGV9kdaOfZDPXcHzhG7lBxhj6A7KvfLJBd6Q==}
 
-  /ember-auto-import@2.7.3(@glint/template@1.4.0)(webpack@5.92.1):
-    resolution: {integrity: sha512-EQzStGYxNvTPYWCFh0X57HFAzAvA2rHHRgBeWNDKHQ/rENNlHw0c0e0i1XebwEfv+yGHOodE4dN+f/mrYkQXLw==}
+  /ember-auto-import@2.7.4(@glint/template@1.4.0)(webpack@5.92.1):
+    resolution: {integrity: sha512-6CdXSegJJc8nwwK7+1lIcBUnMVrJRNd4ZdMgcKbCAwPvcGxMgRVBddSzrX/+q/UuflvTEO26Dk1g7Z6KHMXUhw==}
     engines: {node: 12.* || 14.* || >= 16}
     dependencies:
       '@babel/core': 7.24.7
@@ -6348,7 +6348,7 @@ packages:
       broccoli-funnel: 3.0.8
       broccoli-merge-trees: 4.2.0
       chalk: 4.1.2
-      ember-auto-import: 2.7.3(@glint/template@1.4.0)(webpack@5.92.1)
+      ember-auto-import: 2.7.4(@glint/template@1.4.0)(webpack@5.92.1)
       ember-cli-babel: 7.26.11
       ember-cli-get-component-path-option: 1.0.0
       ember-cli-is-package-missing: 1.0.0
