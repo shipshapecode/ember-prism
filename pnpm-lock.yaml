@@ -213,7 +213,7 @@ devDependencies:
     version: 2.21.0
   qunit-dom:
     specifier: ^3.0.0
-    version: 3.1.2
+    version: 3.2.0
   release-it:
     specifier: ^15.5.0
     version: 15.11.0
@@ -5653,6 +5653,10 @@ packages:
     resolution: {integrity: sha512-CVzntLid1oFVHTKdTp/Qu7Kz+wSm8uO30TSQyAJ6n4Dz09yTzVQn3S1oRhVhUubxdMuKs1DjDqt88pubHagbPw==}
     dev: true
 
+  /dom-element-descriptors@0.5.1:
+    resolution: {integrity: sha512-DLayMRQ+yJaziF4JJX1FMjwjdr7wdTr1y9XvZ+NfHELfOMcYDnCHneAYXAS4FT1gLILh4V0juMZohhH1N5FsoQ==}
+    dev: true
+
   /dot-case@3.0.4:
     resolution: {integrity: sha512-Kv5nKlh6yRrdrGvxeJ2e5y2eRUpkUosIW4A2AS38zwSz27zu7ufDwQPi5Jhs3XAlGNetl3bmnGhQsMtkKJnj3w==}
     dependencies:
@@ -10975,8 +10979,10 @@ packages:
       rimraf: 2.7.1
       underscore.string: 3.3.6
 
-  /qunit-dom@3.1.2:
-    resolution: {integrity: sha512-urHvzhDxihYrMBpsT/Fk7So79CPfvS0ZwZw2VPA+0JV1Q1XP2IhDg/PLHTt+r2j7787iQAOpILx2GjwAa6CpnA==}
+  /qunit-dom@3.2.0:
+    resolution: {integrity: sha512-VYFXbwod2sis16Nzgx5UrdCvjNUPYIAbTwEGv7hF1RfgJaVgG5ASVaQz9en0ZRvlybtql0LrVuAbleJU/57zQQ==}
+    dependencies:
+      dom-element-descriptors: 0.5.1
     dev: true
 
   /qunit-theme-ember@1.0.0:
