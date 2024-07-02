@@ -1,3 +1,21 @@
+
+## v1.0.0 (2024-07-02)
+
+#### :boom: Breaking Change
+* [#892](https://github.com/shipshapecode/ember-prism/pull/892) Drop support for node < 18 and ember < 4.8 ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+* [#778](https://github.com/shipshapecode/ember-prism/pull/778) ember-cli-update to 5.1, drop node 14 ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+* [#709](https://github.com/shipshapecode/ember-prism/pull/709) Ember 4.12, drop support for Ember < 4.4 ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+* [#582](https://github.com/shipshapecode/ember-prism/pull/582) Ember 4.7, node >= 14 ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+
+#### :house: Internal
+* [#955](https://github.com/shipshapecode/ember-prism/pull/955) pnpm update ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+* [#878](https://github.com/shipshapecode/ember-prism/pull/878) Convert to TypeScript ([@charlesfries](https://github.com/charlesfries))
+* [#893](https://github.com/shipshapecode/ember-prism/pull/893) Switch to pnpm ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+
+#### Committers: 2
+- Charles Fries ([@charlesfries](https://github.com/charlesfries))
+- Robbie Wagner ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+
 ## v0.13.0 (2022-07-28)
 
 #### :rocket: Enhancement
