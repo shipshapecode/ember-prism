@@ -192,7 +192,7 @@ devDependencies:
     version: 9.1.0(eslint@8.57.0)
   eslint-plugin-ember:
     specifier: ^12.1.1
-    version: 12.1.1(@babel/core@7.25.2)(@typescript-eslint/parser@7.18.0)(eslint@8.57.0)
+    version: 12.2.0(@babel/core@7.25.2)(@typescript-eslint/parser@7.18.0)(eslint@8.57.0)
   eslint-plugin-n:
     specifier: ^17.9.0
     version: 17.10.2(eslint@8.57.0)
@@ -6569,8 +6569,8 @@ packages:
     resolution: {integrity: sha512-Uk/TVLt6Nf6Xoz7C1iYuZjOSdJxe5aaauGRke8JhKeJwD66Y61/pY2FjtLP04Ooq9PwV34bzrkKkU2UZ5FtDRA==}
     dev: true
 
-  /eslint-plugin-ember@12.1.1(@babel/core@7.25.2)(@typescript-eslint/parser@7.18.0)(eslint@8.57.0):
-    resolution: {integrity: sha512-95YWz2nVWtFHwrNlW8kpBivudieTHkiW3vlG3X1P24IpQLigVtPe14LDcZ/vPtEV92Ccao4xcKPKWWOeG0hSNQ==}
+  /eslint-plugin-ember@12.2.0(@babel/core@7.25.2)(@typescript-eslint/parser@7.18.0)(eslint@8.57.0):
+    resolution: {integrity: sha512-Pf0LB70qzrGqbxrieASFDqxvGu7/xgejM78Kj+VsH27XqkuoluF1M5fBU5xxNB7oRCpA5IFA5jdN9WnnSjLzKA==}
     engines: {node: 18.* || 20.* || >= 21}
     peerDependencies:
       '@typescript-eslint/parser': '*'
