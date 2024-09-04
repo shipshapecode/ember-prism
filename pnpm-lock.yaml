@@ -36,7 +36,7 @@ devDependencies:
     version: 2.1.0
   '@ember/test-helpers':
     specifier: ^4.0.2
-    version: 4.0.2(@babel/core@7.25.2)(@glint/template@1.4.0)(ember-source@5.11.0)
+    version: 4.0.3(@babel/core@7.25.2)(@glint/template@1.4.0)(ember-source@5.11.0)
   '@embroider/test-setup':
     specifier: ^4.0.0
     version: 4.0.0
@@ -168,7 +168,7 @@ devDependencies:
     version: 8.2.3(ember-source@5.11.0)
   ember-qunit:
     specifier: ^8.1.0
-    version: 8.1.0(@ember/test-helpers@4.0.2)(@glint/template@1.4.0)(ember-source@5.11.0)(qunit@2.22.0)
+    version: 8.1.0(@ember/test-helpers@4.0.3)(@glint/template@1.4.0)(ember-source@5.11.0)(qunit@2.22.0)
   ember-resolver:
     specifier: ^11.0.1
     version: 11.0.1(ember-source@5.11.0)
@@ -1656,8 +1656,8 @@ packages:
       - supports-color
     dev: false
 
-  /@ember/test-helpers@4.0.2(@babel/core@7.25.2)(@glint/template@1.4.0)(ember-source@5.11.0):
-    resolution: {integrity: sha512-9vV5nDx1ZzmTmexzTudRk9M04JY6mqB3NxJB116vkjGQWIRTgiAVUgBkFIudRXvX1QiOGTo6IPxQRXZRS+v28w==}
+  /@ember/test-helpers@4.0.3(@babel/core@7.25.2)(@glint/template@1.4.0)(ember-source@5.11.0):
+    resolution: {integrity: sha512-6RlNpzd108E7nq24wGtFHzt1uxq7kYPU0k8iWWsStfspyQs15vd3OjhSXmB+Uhzpt7b7Itb6UsOnBEPwlgJZsw==}
     peerDependencies:
       ember-source: '>= 4.0.0'
     dependencies:
@@ -6089,14 +6089,14 @@ packages:
       - supports-color
     dev: true
 
-  /ember-qunit@8.1.0(@ember/test-helpers@4.0.2)(@glint/template@1.4.0)(ember-source@5.11.0)(qunit@2.22.0):
+  /ember-qunit@8.1.0(@ember/test-helpers@4.0.3)(@glint/template@1.4.0)(ember-source@5.11.0)(qunit@2.22.0):
     resolution: {integrity: sha512-55/xqvVQwhiNcnh/tCzWyvlYzrYqwDY0/cIPyDQbAxGKtkUt9jCfRUGllfyOofC6LX0fL/0fIi+5e9sg1m6vXw==}
     peerDependencies:
       '@ember/test-helpers': '>=3.0.3'
       ember-source: '>=4.0.0'
       qunit: ^2.13.0
     dependencies:
-      '@ember/test-helpers': 4.0.2(@babel/core@7.25.2)(@glint/template@1.4.0)(ember-source@5.11.0)
+      '@ember/test-helpers': 4.0.3(@babel/core@7.25.2)(@glint/template@1.4.0)(ember-source@5.11.0)
       '@embroider/addon-shim': 1.8.9
       '@embroider/macros': 1.16.5(@glint/template@1.4.0)
       ember-cli-test-loader: 3.1.0
