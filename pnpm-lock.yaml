@@ -171,7 +171,7 @@ devDependencies:
     version: 8.1.0(@ember/test-helpers@4.0.4)(@glint/template@1.4.0)(ember-source@5.11.0)(qunit@2.22.0)
   ember-resolver:
     specifier: ^13.0.1
-    version: 13.0.1(ember-source@5.11.0)
+    version: 13.0.2(ember-source@5.11.0)
   ember-source:
     specifier: ~5.11.0
     version: 5.11.0(@glimmer/component@1.1.2)(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.94.0)
@@ -6114,8 +6114,8 @@ packages:
       - supports-color
     dev: true
 
-  /ember-resolver@13.0.1(ember-source@5.11.0):
-    resolution: {integrity: sha512-+F0lX8P9pBwE1hf8PMhe7ftT3f9PQSQwIXPN1qc9Aiij5V/GDVTdd+j4+CSj6tCHlf6ylADGxs4c6mofs/sDvQ==}
+  /ember-resolver@13.0.2(ember-source@5.11.0):
+    resolution: {integrity: sha512-9G8CVjjI4Q6vx2+FYg8YeLu+/fP4eBL/1+qp5bzwtXQ7G3xkg0YRpcufIdsBjf5K2SUStU83qhNH2O6aanf3nw==}
     engines: {node: 14.* || 16.* || >= 18}
     peerDependencies:
       ember-source: ^4.12.0 || >= 5.0.0
