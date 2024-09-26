@@ -10,7 +10,7 @@ dependencies:
     version: 7.25.2
   '@ember/render-modifiers':
     specifier: ^2.1.0
-    version: 2.1.0(@babel/core@7.25.2)(@glint/template@1.4.0)(ember-source@5.11.0)
+    version: 2.1.0(@babel/core@7.25.2)(@glint/template@1.4.0)(ember-source@5.11.1)
   ember-auto-import:
     specifier: ^2.7.4
     version: 2.8.1(@glint/template@1.4.0)(webpack@5.95.0)
@@ -36,7 +36,7 @@ devDependencies:
     version: 2.1.0
   '@ember/test-helpers':
     specifier: ^4.0.2
-    version: 4.0.4(@babel/core@7.25.2)(@glint/template@1.4.0)(ember-source@5.11.0)
+    version: 4.0.4(@babel/core@7.25.2)(@glint/template@1.4.0)(ember-source@5.11.1)
   '@embroider/test-setup':
     specifier: ^4.0.0
     version: 4.0.0
@@ -165,16 +165,16 @@ devDependencies:
     version: 2.1.2(@babel/core@7.25.2)
   ember-page-title:
     specifier: ^8.2.3
-    version: 8.2.3(ember-source@5.11.0)
+    version: 8.2.3(ember-source@5.11.1)
   ember-qunit:
     specifier: ^8.1.0
-    version: 8.1.0(@ember/test-helpers@4.0.4)(@glint/template@1.4.0)(ember-source@5.11.0)(qunit@2.22.0)
+    version: 8.1.0(@ember/test-helpers@4.0.4)(@glint/template@1.4.0)(ember-source@5.11.1)(qunit@2.22.0)
   ember-resolver:
     specifier: ^13.0.1
-    version: 13.0.2(ember-source@5.11.0)
+    version: 13.0.2(ember-source@5.11.1)
   ember-source:
     specifier: ~5.11.0
-    version: 5.11.0(@glimmer/component@1.1.2)(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.95.0)
+    version: 5.11.1(@glimmer/component@1.1.2)(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.95.0)
   ember-source-channel-url:
     specifier: ^3.0.0
     version: 3.0.0
@@ -1636,7 +1636,7 @@ packages:
       - supports-color
     dev: true
 
-  /@ember/render-modifiers@2.1.0(@babel/core@7.25.2)(@glint/template@1.4.0)(ember-source@5.11.0):
+  /@ember/render-modifiers@2.1.0(@babel/core@7.25.2)(@glint/template@1.4.0)(ember-source@5.11.1):
     resolution: {integrity: sha512-LruhfoDv2itpk0fA0IC76Sxjcnq/7BC6txpQo40hOko8Dn6OxwQfxkPIbZGV0Cz7df+iX+VJrcYzNIvlc3w2EQ==}
     engines: {node: 12.* || 14.* || >= 16}
     peerDependencies:
@@ -1650,13 +1650,13 @@ packages:
       '@glint/template': 1.4.0
       ember-cli-babel: 7.26.11
       ember-modifier-manager-polyfill: 1.2.0(@babel/core@7.25.2)
-      ember-source: 5.11.0(@glimmer/component@1.1.2)(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.95.0)
+      ember-source: 5.11.1(@glimmer/component@1.1.2)(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.95.0)
     transitivePeerDependencies:
       - '@babel/core'
       - supports-color
     dev: false
 
-  /@ember/test-helpers@4.0.4(@babel/core@7.25.2)(@glint/template@1.4.0)(ember-source@5.11.0):
+  /@ember/test-helpers@4.0.4(@babel/core@7.25.2)(@glint/template@1.4.0)(ember-source@5.11.1):
     resolution: {integrity: sha512-1mbOVyVEcLxYOGzBaeeaQkCrL1o9Av86QaHk/1RvrVBW24I6YUj1ILLEi2qLZT5PzcCy0TdfadHT3hKJwJ0GcQ==}
     peerDependencies:
       ember-source: '>= 4.0.0'
@@ -1667,7 +1667,7 @@ packages:
       '@simple-dom/interface': 1.4.0
       decorator-transforms: 2.0.0(@babel/core@7.25.2)
       dom-element-descriptors: 0.5.1
-      ember-source: 5.11.0(@glimmer/component@1.1.2)(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.95.0)
+      ember-source: 5.11.1(@glimmer/component@1.1.2)(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.95.0)
     transitivePeerDependencies:
       - '@babel/core'
       - '@glint/template'
@@ -6082,7 +6082,7 @@ packages:
       - supports-color
     dev: false
 
-  /ember-page-title@8.2.3(ember-source@5.11.0):
+  /ember-page-title@8.2.3(ember-source@5.11.1):
     resolution: {integrity: sha512-9XH4EVPCpSCyXRsLPzdDydU4HgQnaVeJJTrRF0WVh5bZERI9DgxuHv1NPmZU28todHRH91KcBc5nx8kIVJmqUw==}
     engines: {node: 16.* || >= 18}
     peerDependencies:
@@ -6090,23 +6090,23 @@ packages:
     dependencies:
       '@embroider/addon-shim': 1.8.9
       '@simple-dom/document': 1.4.0
-      ember-source: 5.11.0(@glimmer/component@1.1.2)(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.95.0)
+      ember-source: 5.11.1(@glimmer/component@1.1.2)(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.95.0)
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /ember-qunit@8.1.0(@ember/test-helpers@4.0.4)(@glint/template@1.4.0)(ember-source@5.11.0)(qunit@2.22.0):
+  /ember-qunit@8.1.0(@ember/test-helpers@4.0.4)(@glint/template@1.4.0)(ember-source@5.11.1)(qunit@2.22.0):
     resolution: {integrity: sha512-55/xqvVQwhiNcnh/tCzWyvlYzrYqwDY0/cIPyDQbAxGKtkUt9jCfRUGllfyOofC6LX0fL/0fIi+5e9sg1m6vXw==}
     peerDependencies:
       '@ember/test-helpers': '>=3.0.3'
       ember-source: '>=4.0.0'
       qunit: ^2.13.0
     dependencies:
-      '@ember/test-helpers': 4.0.4(@babel/core@7.25.2)(@glint/template@1.4.0)(ember-source@5.11.0)
+      '@ember/test-helpers': 4.0.4(@babel/core@7.25.2)(@glint/template@1.4.0)(ember-source@5.11.1)
       '@embroider/addon-shim': 1.8.9
       '@embroider/macros': 1.16.5(@glint/template@1.4.0)
       ember-cli-test-loader: 3.1.0
-      ember-source: 5.11.0(@glimmer/component@1.1.2)(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.95.0)
+      ember-source: 5.11.1(@glimmer/component@1.1.2)(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.95.0)
       qunit: 2.22.0
       qunit-theme-ember: 1.0.0
     transitivePeerDependencies:
@@ -6114,7 +6114,7 @@ packages:
       - supports-color
     dev: true
 
-  /ember-resolver@13.0.2(ember-source@5.11.0):
+  /ember-resolver@13.0.2(ember-source@5.11.1):
     resolution: {integrity: sha512-9G8CVjjI4Q6vx2+FYg8YeLu+/fP4eBL/1+qp5bzwtXQ7G3xkg0YRpcufIdsBjf5K2SUStU83qhNH2O6aanf3nw==}
     engines: {node: 14.* || 16.* || >= 18}
     peerDependencies:
@@ -6124,7 +6124,7 @@ packages:
         optional: true
     dependencies:
       ember-cli-babel: 7.26.11
-      ember-source: 5.11.0(@glimmer/component@1.1.2)(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.95.0)
+      ember-source: 5.11.1(@glimmer/component@1.1.2)(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.95.0)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -6152,8 +6152,8 @@ packages:
       - encoding
     dev: true
 
-  /ember-source@5.11.0(@glimmer/component@1.1.2)(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.95.0):
-    resolution: {integrity: sha512-ufjjTyyaVKBpgTf0NrX7HQqzphcgpNQdkMss2SENkHkM9cidcdEPxulqcMNFxjHCsLBE7rGxmPFSci3x7LdIzA==}
+  /ember-source@5.11.1(@glimmer/component@1.1.2)(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.95.0):
+    resolution: {integrity: sha512-il3aR4qEx8r0y99iZsyVdDeu2cscYLQ6+m1znhAu56s65c+9bdw3KPnVcKDxIwKH0n520jYVGpGHu7OI9kt0Zw==}
     engines: {node: '>= 18.*'}
     peerDependencies:
       '@glimmer/component': ^1.1.2
