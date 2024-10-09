@@ -1,3 +1,4 @@
+// @ts-expect-error no types shipped from prismjs-glimmer
 import { setup as glimmer } from 'prismjs-glimmer';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

@@ -1,16 +1,16 @@
 import Component from '@glimmer/component';
 
 interface CodeBlockSignature {
+  Element: HTMLElement;
   Args: {
     code: string;
     language?: string;
     showLineNumbers?: boolean;
     start?: string;
   };
-  Element: HTMLElement;
 }
 
-export default class CodeBlockComponent extends Component<CodeBlockSignature> {
+export default class CodeBlock extends Component<CodeBlockSignature> {
   get language() {
     return this.args.language ?? 'markup';
   }
@@ -22,6 +22,6 @@ export default class CodeBlockComponent extends Component<CodeBlockSignature> {
 
 declare module '@glint/environment-ember-loose/registry' {
   export default interface Registry {
-    CodeBlock: typeof CodeBlockComponent;
+    CodeBlock: typeof CodeBlock;
   }
 }

@@ -8,14 +8,14 @@ import { assert } from '@ember/debug';
 declare const Prism: any;
 
 interface CodeInlineSignature {
+  Element: HTMLElement;
   Args: {
     code: string;
     language?: string;
   };
-  Element: HTMLElement;
 }
 
-export default class CodeInlineComponent extends Component<CodeInlineSignature> {
+export default class CodeInline extends Component<CodeInlineSignature> {
   @tracked prismCode: string | SafeString = '';
 
   get code() {
@@ -63,6 +63,6 @@ export default class CodeInlineComponent extends Component<CodeInlineSignature> 
 
 declare module '@glint/environment-ember-loose/registry' {
   export default interface Registry {
-    CodeInline: typeof CodeInlineComponent;
+    CodeInline: typeof CodeInline;
   }
 }
